@@ -1,0 +1,27 @@
+.cart-container {
+    width: 80%;
+    margin: 20px auto;
+}
+.cart-container h2 {
+    margin-bottom: 20px;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.cart-item img {
+    max-width: 100px;
+    margin-right: 14px;
+}
+.cart-total {
+    font-weight: bold;
+    margin-top: 10px;
+}
+.luachon:hover {
+    transform: scale(1.01); /* Zoom ra 1.1 khi hover */
+    transition: transform 0.3s ease; /* Thêm hiệu ứng chuyển động */
+}
