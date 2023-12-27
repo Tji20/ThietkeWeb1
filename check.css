@@ -1,0 +1,363 @@
+
+    * {
+        box-sizing: inherit;
+        margin-top: 0%;
+        margin-left: 0%;
+        margin-right: 0%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    html {
+        font-size: 100%;
+        line-height: 16px;
+        font-family: sans-serif;
+        box-sizing: border-box;
+    }
+    
+   
+   
+    .grid__row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .grid_column {
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 25%;
+    }
+    
+    .first {
+        height: 30px;
+        background-color: #000101;
+        color: white;
+        align-items: center;
+        text-align: center;
+        padding-top: 8px;
+        margin-top: 0%;
+    }
+    
+    .header {
+        /* height: 130px; */
+        background-color: rgb(233, 230, 230);
+    }
+    
+    .search {
+        height: 100px;
+        display: flex;
+        background-color: rgb(233, 230, 230);
+        align-items: center;
+    }
+    
+    .header__logo img {
+        width: 150px;
+        align-items: center;
+    }
+    
+    .header__search {
+        color: rgb(191, 152, 80);
+        height: 10px;
+        flex: 1;
+        border-radius: 2px;
+        margin-top: 10px;
+        margin-left: 30px;
+        align-items: center;
+        display: flex;
+        
+    }
+    .header__search h2 {
+        text-align: left;
+        font-size: 20px;
+        margin: 0;
+        padding: 0; }
+    
+    
+    .input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        color: gray;
+        padding: 0 16px;
+        border-radius: 3px;
+    }
+    
+    .header__search-button {
+        background-color: rgb(233, 230, 230);
+        border: none;
+        height: 34px;
+        width: 34px;
+        border-radius: 3px;
+        margin-right: 3px;
+        display: flex;
+    }
+    
+    .header__search-button-icon {
+        font-size: medium;
+        color: white;
+        display: flex;
+    }
+    
+    .header__icon {
+        width: 500px;
+        margin-top: 40px;
+        margin-right: 0%;
+        display: flex;
+        justify-content: space-between;
+        float: left;
+    }
+    
+    .header__icon ul li a {
+        text-decoration: none;
+        background-color: rgb(191, 152, 80)3C;
+        color: white;
+        font-size: 16px;
+        background-color:rgb(191, 152, 80);
+        padding: 10px 10px;
+        margin-top: 0px;
+    }
+    
+    .header__icon ul li a:hover {
+        background: white;
+        color: #000000;
+    }
+    
+    .header__navbar {
+        display: flex;
+        background-color: #010302;
+        align-items: center;
+        height: 40px;
+    }
+    
+    .header__navbar ul li a {
+        text-decoration: none;
+        margin-top: 10px;
+        color: white;
+        font-size: 16px;
+        padding-top: 10px;
+        padding: 10px 20px;
+    }
+    
+    .header__navbar ul li a:hover {
+        background: white;
+        color: #020806;
+    }
+    
+    .header__list {
+        list-style: none;
+    }
+    
+    .header__items {
+        display: inline-block;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+    
+        to {
+            opacity: 1;
+        }
+    }
+    
+    .modal {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        animation: fadeIn linear 0.2s;
+    }
+    
+    .modal__overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .modal__body {
+        width: 400px;
+        height: 400px;
+        background-color: white;
+        margin: auto;
+        position: relative;
+    }
+    
+    .form {
+        padding: 30px;
+    }
+    
+    .form__header {
+        text-align: center;
+    }
+    
+    .form__header h3 {
+        text-transform: uppercase;
+        font-size: larger;
+    }
+    
+    .form__header p {
+        font-size: small;
+    }
+    
+    .form__input {
+        width: 100%;
+        height: 40px;
+        padding: 0 10px;
+        margin-top: 16px;
+    }
+    
+    .form__bodynext {
+        font-size: small;
+        color: gray;
+        margin-top: 16px;
+    }
+    
+    .form__bodynext p a {
+        color: rgb(0, 0, 0);
+    }
+    
+    .form__button {
+        width: 100%;
+        height: 40px;
+        color: white;
+        background-color: #000000;
+        text-transform: uppercase;
+        margin-top: 20px;
+    }
+    
+    .form__button:hover {
+        color: black;
+        background-color: gray;
+    }
+    
+    .form__end {
+        font-size: small;
+        color: gray;
+        margin-top: 20px;
+        text-align: center;
+        line-height: 10px;
+    }
+    
+    .form__end p a {
+        color: rgb(66, 183, 255);
+    }
+    
+    .footer {
+        text-align: center;
+        margin-bottom: 0%;
+        background-color: #010201;
+        color: white;
+    }
+    
+    .images1 img,
+    .images2 img,
+    .images3 img,
+    .images4 img,
+    .images5 img {
+        height: 300px;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    ul.product li .images8 img {
+        height: 300px;
+        width: 25%;
+    }
+    
+    #wrapper {
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+    
+    ul-products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    ul.products li {
+        flex-basis: 25%;
+    }
+    
+    ul.product li img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    h3 {
+        padding-top: 30px;
+        font-size: 18px;
+        color: rgb(2, 9, 11);
+        padding: 10px 20px;
+        text-transform: uppercase;
+        border: 1px solid #010907;
+        display: inline-block;
+        text-align: center;
+        background-color: #020e0b;
+        color: rgb(191, 152, 80);
+    }
+  
+    ul.product {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    ul.product li {
+        flex-basis: 24%;
+        padding-left: 15px;
+        padding-bottom: 40px;
+        padding-right: 15px;
+        margin-top: 20px;
+    }
+    
+    ul.product li img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    ul.product li .product-info a.product-cat {
+        text-transform: uppercase;
+        color: #020c09;
+        padding: 3px 0px;
+        font-weight: 600;
+    }
+    
+    ul.product li .product-info .product-price {
+        padding: 6px;
+    }
+    
+    ul.product li .product-info {
+        padding: 20px 0px;
+    }
+    footer {
+        background-image: url('https://png.pngtree.com/background/20230519/original/pngtree-dark-basement-with-marble-bar-counters-and-chandelier-picture-image_2667361.jpg') ;
+        background-size: cover;
+        background-repeat: no-repeat; 
+        background-position: center;
+        color: white;
+        opacity: 0.8;
+        
+    }
+    
+    
+.navbar-nav .nav-item form button:hover {
+    color: black;
+}
+
+
+    
+    
+    
+    
+    
+    
+    
