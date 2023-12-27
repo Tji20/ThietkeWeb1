@@ -1,4 +1,14 @@
 
+header h1 {
+  font-size: 40px;
+  text-align: left; 
+  margin: 0; 
+}
+header {
+  height: 100px; 
+  margin-top: -25px; 
+}
+
 /*thông tin sản phẩm*/
 .logo-img {
   height: 50px; /* Đặt chiều cao của hình ảnh */
