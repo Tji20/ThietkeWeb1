@@ -127,21 +127,22 @@ allStar.forEach((item, idx)=> {
 
 
 
- //hiển thị sản phẩm 
- 
- function addToCart() {
-  const product = {
-      name: "Đèn Ốp Quạt Trần Ø1000mm MC-KD1364",
-      price: 4950000,
-      image: "https://denchauau.vn/media/product/den-chum-quat-thien-ha-mc-kd1364.jpg",
-  };
-
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  cart.push({ ...product, quantity: 1 });
+//Cho sản phẩm vào giỏ hàng:
+function addToCart(selectedProduct) {
+  var cart = JSON.parse(localStorage.getItem("cart")) || [];
+  // Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng chưa
+  var existingProduct = cart.find((item) => item.name === selectedProduct.name);
+  if (existingProduct) { // Nếu sản phẩm đã tồn tại, chỉ tăng số lượng
+      existingProduct.quantity = (existingProduct.quantity || 1) + 1;
+  } else {// Nếu sản phẩm chưa tồn tại, thêm mới vào giỏ hàng
+      selectedProduct.quantity = 1;
+      cart.push(selectedProduct);
+  }
   localStorage.setItem("cart", JSON.stringify(cart));
-  alert("Sản phẩm đã được thêm vào giỏ hàng!");
+  alert("Đã thêm vào giỏ hàng!");
+  displayCart();
 }
-
+//Mua ngay
 function goToCheckout() {
   window.location.href = "checkout.html";
 }
