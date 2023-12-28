@@ -290,14 +290,14 @@
 
 <body>
     <header class="bg-dark text-white text-center py-2">
-        <div class="container">
+        <div class="containers">
             <div class="row align-items-center">
                 <div class="col-md-6 text-md-left">
-                    <h1>LumièreLuxe</h1>
+                    <h1 style="margin-left: 100px;">LumièreLuxe</h1>
                 </div>
                 <div class="col-md-6 text-md-right">
-                    <div class="additional-actions" style="display: flex; width: 100%;">
-                        <a href="#" class="header-action";>
+                    <div class="additional-actions" style="margin-left: 100px; margin-right: 120px;" >
+                        <a href="#" class="header-action">
                             <i class="material-icons" style="color: white;">account_circle</i> 
                             Đăng nhập / Đăng ký
                         </a>
@@ -742,20 +742,22 @@
 
     <div class="product-container" onmouseover="showProductDetail()" onmouseout="hideProductDetail()">
         <div class="product-img">
-            <img class="productImage" src="image_image/pr12.jpg" alt="Product"  >
+            <img class="productImage" src="image_image/pr25.jpg" alt="Product"  >
             <div class="product-detail">
                 <h3>Đèn chùm pha lê Keith- ZFB005</h3>
                 <p class="product-price"> <span class="discounted-price">14,800,000đ</span></p>
                 <p class="original-price"> <span class="line-through">15,250,000đ</span></p>
-                <p class="purchase-count">62 lượt mua</p>
+                <p class="purchase-count">29 lượt mua</p>
                 <div class="action-buttons">
-                    <img class="add-to-cart-icon" src="giohang.png" alt="Add to Cart">
+                    <img class="add-to-cart-icon" src="image_image/giohang.png" alt="Add to Cart">
                     <button class="add-to-cart-btn" onclick="addToCart()">THÊM VÀO GIỎ HÀNG</button>
                     <button class="buy-now-btn">MUA NGAY</button>
                 </div>
             </div>
         </div>
     </div>
+
+   
 
     <ul class="pagination">
         <li><a href="file:///C:/Users/Admin/Documents/BTL/den_chum_1.html" class="active">1</a></li>
@@ -882,13 +884,13 @@
 
 <footer id="footer" class="footer-1 mt-4">
     <div class="main-footer widgets-dark typo-light">
-        <div class="container">
+        <div class="container" style="margin-left: 100px;">
             <div class="row">
 
                 <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="widget subscribe no-box">
                         <h5 class="widget-title">LumièreLuxe-Luxury Light<span></span></h5>
-                        <p>LumièreLuxe: Định nghĩa lại sự rực rỡ với sự sang trọng vô song. Chiếu sáng không
+                        <p style="text-align:justify;"> Định nghĩa lại sự rực rỡ với sự sang trọng vô song. Chiếu sáng không
                             gian của bạn bằng đèn chùm vượt thời gian của chúng tôi, nơi sự sang trọng gặp ánh sáng. Trải nghiệm nghệ
                             thuật rạng rỡ..</p>
                     </div>
@@ -950,7 +952,7 @@
 
                 <div class="col-xs-12 col-sm-6 col-md-3">
 
-                    <div class="widget no-box">
+                    <div class="widget no-box" >
                         <h5 class="widget-title">Đường đến LumièreLuxe<span></span></h5>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.601945519024!2d105.82584720928297!3d21.00858748839333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac8041a9648d%3A0xe487dd495fdfd676!2zMTIgUC4gQ2jDuWEgQuG7mWMsIFF1YW5nIFRydW5nLCDEkOG7kW5nIMSQYSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1701191037303!5m2!1svi!2s" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         
@@ -962,31 +964,15 @@
     </div>
 
     <div class="footer-copyright">
-        <div class="container">
+        <div class="container" style="padding: 0px;">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <p>Copyright LumièreLuxe © 2023. All rights reserved.</p>
+                    <p style="margin-left: 450px;">Copyright LumièreLuxe © 2023. All rights reserved.</p>
                 </div>
             </div>
         </div>
     </div>
 </footer>
-<script src="script.js" defer>
-    function showDiscountImage(productNumber) {
-    document.getElementById(`discountImage${productNumber}`).style.display = 'block';
-}
 
-function hideDiscountImage(productNumber) {
-    document.getElementById(`discountImage${productNumber}`).style.display = 'none';
-}
-
-function addToCart(productNumber) {
-    // Thực hiện logic của bạn để thêm sản phẩm vào giỏ hàng
-    console.log(`Sản phẩm ${productNumber} đã được thêm vào giỏ hàng`);
-}
-
-
-
-</script>
 
 </html>
