@@ -31,5 +31,5 @@ function completeCheckout() {
 
     //Xác nhận thanh toán
     alert("Đặt hàng thành công!");
-    window.location.href = "home.html";
+    window.location.href = "index.html";
 }
