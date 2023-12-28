@@ -1,207 +1,166 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px;
 
-    section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      width: 100%;
-    }
-    .form-box {
-      position: relative;
-      width: 400px;
-      height: 450px;
-      background: transparent;
-      border: 2px solid rgba(255, 255, 255, 0.5);
-      border-radius: 20px;
-      backdrop-filter: blur(15px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    h2 {
-      font-size: 2em;
-      color: #fff;
-      text-align: center;
-    }
-    .input {
-        width: 100%;
-        height: 100%;
-        border: none;
-        outline: none;
-        font-size: 14px;
-        color: gray;
-        padding: 0 16px;
-        border-radius: 3px;
-    }
+}
+
+.image-section,
+.form-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.content-container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.section-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.section-heading span {
+  color: rgb(191, 152, 80);
+}
+
+.section-paragraph {
+  font-size: 16px;
+}
+
+.form-wrapper {
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+h2 {
+  padding: 10px;
+  border-radius: 8px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 15px; 
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; 
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.remember-me label {
+  font-size: 16px;
+  margin-left: 8px;
+  white-space: nowrap;
+}
+.login-btn {
+  background-color: #ff9900;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
 
 
-    .form {
-        padding: 30px;
-    }
-    
-    .form__header {
-        text-align: center;
-    }
-    
-    .form__header h3 {
-        text-transform: uppercase;
-        font-size: larger;
-    }
-    
-    .form__header p {
-        font-size: small;
-    }
-    
-    .form__input {
-        width: 100%;
-        height: 40px;
-        padding: 0 10px;
-        margin-top: 16px;
-    }
-    
-    .form__bodynext {
-        font-size: small;
-        color: gray;
-        margin-top: 16px;
-    }
-    
-    .form__bodynext p a {
-        color: rgb(0, 0, 0);
-    }
-    
-    .form__button {
-        width: 100%;
-        height: 40px;
-        color: white;
-        background-color: #000000;
-        text-transform: uppercase;
-        margin-top: 20px;
-    }
-    
-    .form__button:hover {
-        color: black;
-        background-color: gray;
-    }
-    
-    .form__end {
-        font-size: small;
-        color: gray;
-        margin-top: 20px;
-        text-align: center;
-        line-height: 10px;
-    }
-    
-    .form__end p a {
-        color: rgb(66, 183, 255);
-    }
-    
+.register {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
 
-    .inputbox {
-      position: relative;
-      margin: 30px 0px;
-      width: 310px;
-      border-bottom: 2px solid #333;
-    }
-    .inputbox label {
-      position: absolute;
-      top: 50%;
-      left: 5px;
-      transform: translateY(-50%);
-      color: #333;
-      font-size: 1em;
-      pointer-events: none;
-      transition: 0.5s;
-    }
-    input:focus ~ label,
-    input:valid ~ label {
-      top: -5px;
-    }
-    .inputbox input {
-      width: 100%;
-      height: 50px;
-      background: transparent;
-      border: none;
-      outline: none;
-      font-size: 1em;
-      padding: 0 35px 0 5px;
-      color: #333;
-    }
-    .inputbox icon-icon {
-      position: absolute;
-      right: 8px;
-      color: #333;
-      font-size: 1.2em;
-      top: 20px;
-    }
-    .forget {
-      margin: -15px 0 15px;
-      font-size: -9em;
-      color: #333;
-      display: flex;
-      justify-content: space-between;
-    }
-    .forget label input {
-      margin-right: 3px;
-    }
-    .forget label a {
-      color: #333;
-      text-decoration: none;
-    }
-    .forget label a:hover {
-      text-decoration: underline;
-    }
-    button {
-      width: 100%;
-      height: 40px;
-      border-radius: 40px;
-      background: #333;
-      color: #fff;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      font-size: 1em;
-      font-weight: 600;
-    }
-    .register {
-      font-size: -9em;
-      color: #333;
-      text-align: center;
-      margin: 25px 0 10px;
-    }
-    .register p a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 600;
-    }
-    .register p a:hover {
-      text-decoration: underline;
-    }
-    .gender {
-      margin: -15px 0 15px;
-      padding-bottom: -50px;
-      font-size: -9em;
-      color: #333;
-      display: flex;
-      justify-content: space-between;
-    }
-    .gender label input {
-      margin-right: 3px;
-    }
-    .gender label a {
-      color: #333;
-      text-decoration: none;
-    }
-    .login {
-      font-size: -9em;
-      color: #333;
-      text-align: center;
-      margin: 25px 0 10px;
-    }
-    .login p a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 600;
-    }
-    .login p a:hover {
-      text-decoration: underline;
-    }
+.register p {
+  margin: 0;
+}
+
+.register a {
+  color: #ff9900;
+  text-decoration: none;
+}
+
+.or {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.item {
+  margin: 0 5px;
+}
+
+.item a img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.gender {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 15px;
+}
+
+.gender label {
+  display: flex;
+  align-items: center;
+  margin-right: 10px; 
+}
+
+.gender input {
+  margin-right: 5px; 
+}
+
+.login a {
+  color: #ff9900;
+  text-decoration: none;
+}
+
+.login {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.login p {
+  margin: 0;
+}

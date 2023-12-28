@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,6 +23,7 @@
 
 </head>
 
+
 <body>
     <header class="bg-dark text-white text-center py-2">
         <div class="container">
@@ -30,13 +33,13 @@
                 </div>
                 <div class="col-md-6 text-md-right">
                     <div class="additional-actions">
-                        <a href="login.html" class="header-action";>
+                        <a href="#" class="header-action";>
                             <i class="material-icons" style="color: white;">account_circle</i> 
                             Đăng nhập / Đăng ký
                         </a>
-                        <a href="shopping-cart.html" class="header-action">
+                        <a href="#" class="header-action">
                             <i class="material-icons"style="color: white;">shopping_cart</i> 
-                            Giỏ hàng
+                           <a href="Shopping-cart/shopping-cart.html"> Giỏ hàng </a>
                         </a>
                         <a href="#" class="header-action">
                             <i class="material-icons"style="color: white;">favorite</i> 
@@ -183,7 +186,7 @@
               </div>
         </div>
     </nav>
-   
+
     <div class="banner">
         <img src="https://file.hstatic.net/200000072226/file/2_e3e6860905f34979b8d14afaebbf82b0.png" width="205%" height="250px" alt="Banner Image">
     </div>
@@ -192,33 +195,33 @@
             <div class = "product-div">
                 <div class = "product-div-left">
                     <div class = "img-container">
-                        <img src = "https://denchauau.vn/media/product/den-chum-quat-thien-ha-mc-kd1364.jpg" alt = "watch">
+                        <img src = "https://denchauau.vn/media/product/den-tha-led-hien-dai-al-md8184.jpg" alt = "watch">
                     </div>
                     <div class = "hover-container">
-                        <div><img src = "https://product.hstatic.net/200000564285/product/30_88f4cfa30e7442dda6c489e022faa90a_master.png"></div>
-                        <div><img src = "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lhvtj5wofxxhe0"></div>
-                        <div><img src = "https://down-vn.img.susercontent.com/file/sg-11134201-22090-orbccuerz3hvbf"></div>
-                        <div><img src = "https://denchauau.vn/media/product/den-chum-quat-thien-ha-mc-kd1364.jpg"></div>
-                        <div><img src = "https://down-vn.img.susercontent.com/file/sg-11134201-22120-r9pnyhkvlokv0c"></div>
+                        <div><img src = "https://denchauau.vn/media/product/den-tha-led-hien-dai-al-md8184.jpg"></div>
+                        <div><img src = "https://denhufa.com/wp-content/uploads/2023/02/12-10-7-400x400.jpg"></div>
+                        <div><img src = "https://denhufa.com/wp-content/uploads/2023/02/12-10-1.jpg"></div>
+                        <div><img src = "https://denhufa.com/wp-content/uploads/2023/02/12-10-8.jpg"></div>
+                        <div><img src = "https://denhufa.com/wp-content/uploads/2023/02/12-10-9-400x400.jpg"></div>
                     </div>
                 </div>
                 <div class = "product-div-right">
-                    <span class = "product-name">Đèn Ốp Quạt Trần Ø1000mm MC-KD1364</span>
-                    <span class = "product-price">4,950,000 VNĐ</span>
+                    <span class = "product-name">Đèn Thả LED Hiện Đại L100mm AL-MD8184S-100</span>
+                    <span class = "product-price">2,511,000 VNĐ </span>
                     <div class = "product-rating">
                         <span><i class = "fas fa-star"></i></span>
                         <span><i class = "fas fa-star"></i></span>
                         <span><i class = "fas fa-star"></i></span>
                         <span><i class = "fas fa-star"></i></span>
-                        <span><i class = "fas fa-star-half-alt"></i></span>
-                        <span>(350 ratings)</span>
+                        <span><i class = "fas fa-star"></i></span>
+                        <span>(404 ratings)</span>
                     </div>
                     <!-- Thông tin sản phẩm -->
                     <ul>
                         <li><strong>Tình trạng:</strong> Còn hàng</li>
                         <li><strong>Thương hiệu:</strong> I'FURNI</li>
-                        <li><strong>Phân khúc:</strong> Đèn Quạt</li>
-                        <li><strong>Nhóm sản phẩm:</strong> ĐÈN QUẠT TRẦN</li>
+                        <li><strong>Phân khúc:</strong> Đèn thả LED</li>
+                        <li><strong>Nhóm sản phẩm:</strong> ĐÈN THẢ LED</li>
                     </ul>
 
 
@@ -233,20 +236,20 @@
                     
 
                     <!-- Counter -->
-                <div class="counter-container">
-                    <button class="counter-btn" onclick="decrement()">-</button>
-                    <span class="counter-value" id="counter">0</span>
-                    <button class="counter-btn" onclick="increment()">+</button>
-                </div>
+                    <div class="counter-container">
+                        <button class="counter-btn" onclick="decrement()">-</button>
+                        <span class="counter-value" id="counter">1</span>
+                        <button class="counter-btn" onclick="increment()">+</button>
+                    </div>
+
                     <div class = "btn-groups">
-                        <button type = "button" class = "add-cart-btn" onclick="addToCart()" ><i class = "fas fa-shopping-cart"></i>Thêm vào giỏi hàng</button>
+                        <button type = "button" class = "add-cart-btn" onclick="addToCart({ name:'Đèn Thả LED Hiện Đại L100mm AL-MD8184S-100', image:'https://denchauau.vn/media/product/den-tha-led-hien-dai-al-md8184.jpg', price: 2511000 })"><i class = "fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button>
                         <button type = "button" class = "buy-now-btn"><i class = "fas fa-wallet"></i>Mua ngay</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
    
  <!-- Tab items -->
  <div class="tabs">
@@ -302,15 +305,15 @@
       <h2>Thông Tin Sản Phẩm</h2>
 
       <ul>
-          <li><strong>Chất Liệu:</strong> Hợp Kim Sơn Tĩnh Điện, Mica</li>
-          <li><strong>Kích Thước (mm):</strong> D1000</li>
+          <li><strong>Chất Liệu:</strong> Thân đèn bằng hợp kim nhôm, Chao đèn bằng Acrylic</li>
+          <li><strong>Kích Thước (mm):</strong>  L800 x H300 + 1500mm </li>
           <li><strong>Nguồn Sáng:</strong> LED 3 Chế Độ</li>
-          <li><strong>Công Suất:</strong> 65W</li>
+          <li><strong>Công Suất:</strong> 89W</li>
           <li><strong>Điều Khiển Từ Xa:</strong> Có</li>
-          <li><strong>Trọng Lượng:</strong> 5kg</li>
+          <li><strong>Trọng Lượng:</strong> 9kg</li>
           <li><strong>Xuất Xứ:</strong> Nhập Khẩu</li>
           <li><strong>Bảo Hành:</strong> 12 Tháng</li>
-          <li><strong>Mã Sản Phẩm:</strong> SP001064</li>
+          <li><strong>Mã Sản Phẩm:</strong> AL-MD8184S-100</li>
       </ul>
     </div>
     <div class="tab-pane">
@@ -573,10 +576,10 @@
     <div class="row">
       <div class="col-md-3">
         <div class="custom-card mb-4">
-          <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lhvtj5woejd102" class="card-img-top" alt="Product 1">
+          <img src="https://denchauau.vn/media/product/den-tha-led-hien-dai-al-pd1655-2-80.jpg" class="card-img-top" alt="Product 1">
           <div class="card-body">
-            <h5 class="card-title">Đèn ốp trần quạt OT83104</h5>
-            <p class="card-text"><strong>Thương hiệu:</strong> I'FURNI</p>
+            <h5 class="card-title">Đèn Thả LED Hiện Đại Ø800mm AL-PD1655-2-80</h5>
+            <p class="card-text"><strong>Giá tiền:</strong> 2,713,500 VNĐ</p>
             <a href="#" class="btn btn-primary">Mua ngay</a>
           </div>
         </div>
@@ -584,10 +587,10 @@
   
       <div class="col-md-3">
         <div class="custom-card mb-4">
-          <img src="https://product.hstatic.net/200000564285/product/ot83104__4__6c6bbfdb0e5944c4ac7b43dff8f87d32_master.jpg" class="card-img-top" alt="Product 2">
+          <img src="https://denchauau.vn/media/product/den-tha-trang-tri-kieu-bac-au-al-rn522-80.jpg" class="card-img-top" alt="Product 2">
           <div class="card-body">
-            <h5 class="card-title">ĐÈN QUẠT TRANG TRÍ OTQ3105</h5>
-            <p class="card-text"><strong>Thương hiệu:</strong> I'FURNI</p>
+            <h5 class="card-title">Đèn Thả LED Trang Trí Ø800mm AL-RN522-80</h5>
+            <p class="card-text"><strong>Giá tiền:</strong>  6,698,700 VNĐ</p>
             <a href="#" class="btn btn-primary">Mua ngay</a>
           </div>
         </div>
@@ -595,10 +598,10 @@
   
       <div class="col-md-3">
         <div class="custom-card mb-4">
-          <img src="https://product.hstatic.net/200000564285/product/otc03_7511c4dd141f452eb6be7c0019a7ed41_1024x1024.jpg" class="card-img-top" alt="Product 3">
+          <img src="https://denchauau.vn/media/product/den-tha-led-hien-dai-al-ky4293-80.jpg" class="card-img-top" alt="Product 3">
           <div class="card-body">
-            <h5 class="card-title">ĐÈN QUẠT TRANG TRÍ OTQ03</h5>
-            <p class="card-text"><strong>Thương hiệu:</strong> I'FURNI</p>
+            <h5 class="card-title">Đèn Thả LED Hiện Đại Ø800mm AL-YK4293-80</h5>
+            <p class="card-text"><strong>Giá tiền:</strong>  6,485,400 VNĐ</p>
             <a href="#" class="btn btn-primary">Mua ngay</a>
           </div>
         </div>
@@ -606,10 +609,10 @@
   
       <div class="col-md-3">
         <div class="custom-card mb-4">
-          <img src="https://product.hstatic.net/200000564285/product/nq50906a_fd1ca6e5c0674f98af42593b282d18d4_master.png" class="card-img-top" alt="Product 4">
+          <img src="https://denchauau.vn/media/product/den-tha-led-hien-dai-al-yk2231-60.jpg" class="card-img-top" alt="Product 4">
           <div class="card-body">
-            <h5 class="card-title">ĐÈN QUẠT TRANG TRÍ NL-NQ50906</h5>
-            <p class="card-text"><strong>Thương hiệu:</strong> I'FURNI</p>
+            <h5 class="card-title">Đèn Thả LED Hiện Đại Ø600mm AL-YK2231-60</h5>
+            <p class="card-text"><strong>Giá tiền:</strong> 1,935,000 VNĐ</p>
             <a href="#" class="btn btn-primary">Mua ngay</a>
           </div>
         </div>
@@ -637,7 +640,7 @@
                         <h5 class="widget-title">Dịch vụ<span></span></h5>
                         <ul class="thumbnail-widget">
                             <li>
-                                <div class="thumb-content"><a href="#.">Chính sách bán hàng</a></div>
+                                <div class="thumb-content"><a href="chinhsachbanhang.html">Chính sách bán hàng</a></div>
                             </li>
                             <li>
                                 <div class="thumb-content"><a href="#.">Chính Sách Giao Hàng & Lắp Đặt</a></div>
