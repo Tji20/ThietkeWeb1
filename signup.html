@@ -25,14 +25,14 @@
 
 <body>
     <header class="bg-dark text-white text-center py-2">
-        <div class="container">
+        <div class="containers">
             <div class="row align-items-center">
                 <div class="col-md-6 text-md-left">
-                    <h1>LumièreLuxe</h1>
+                    <h1 style="margin-left: 100px;">LumièreLuxe</h1>
                 </div>
                 <div class="col-md-6 text-md-right">
-                    <div class="additional-actions">
-                        <a href="#" class="header-action";>
+                    <div class="additional-actions" style="margin-left: 100px; margin-right: 120px;">
+                        <a href="#" class="header-action">
                             <i class="material-icons" style="color: white;">account_circle</i> 
                             Đăng nhập / Đăng ký
                         </a>
@@ -186,62 +186,80 @@
         </div>
     </nav>
     <!--Signup-->
-    <section>
-      <div class="form-box">
-        <div class="form-value">
-          <form action="">
-            <h2 style="color: #333; text-align: center; background-color: white;">ĐĂNG KÝ</h2>
-            <div class="inputbox">
-             
-              <input type="text" required />
-              <label for="">Họ Tên</label>
-             </div>           
-            <div class="inputbox">
-                <icon-icon name="phone"></icon-icon>
-                <input type="tel" required />
-                <label for="">Số điện thoại</label>
-              </div>    
-              <div class="inputbox">
-                <icon-icon name="lock-closed-outline"></icon-icon>
-                <input type="email" required />
-                <label for="">Email</label>
-              </div>        
-            <div class="inputbox">
-              <icon-icon name="lock-closed-outline"></icon-icon>
-              <input type="password" required />
-              <label for="">Mật khẩu</label>
+<section class="container">
+
+    <div class="image-section">
+      <div class="image-wrapper">
+        <img src="" alt="">
+      </div>
+
+      <div class="content-container">
+        <h1 class="section-heading">Nâng tầm vẻ đẹp với ánh sáng tinh tế <span>LumièreLuxe</span></h1>
+        <p class="section-paragraph">Nơi nghệ thuật ánh sáng gặp gỡ phong cách, biến mọi không gian thành kiệt tác tỏa sáng.</p>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <div class="form-wrapper">
+
+
+        <h2>Chào mừng bạn tới LumièreLuxe!</h2>
+        <p>Đăng kí ngay để trải nghiệm không gian sang trọng và tinh tế cùng chúng tôi</p>
+        <div class="input-container">
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Họ tên" required>
+            </div>
+            <div class="form-group">
+                <input type="phonenumber" id="phonenumber" placeholder="Số điện thoại" required>
+            </div>
+            <div class="form-group">
+                <input type="phonenumber" id="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" placeholder="Mật khẩu" required>
             </div>
             <div class="gender">
                 <label for="">
                   <input class="radio" type="radio" name="gender" />Nữ
                   <input class="radio" type="radio" name="gender" />Nam
                 </label>
-              </div>  
-            <button><a href="#"></a>Đăng Ký</button>
-            <div class="login">
-              <p>Đã có tài khoản <a href="login.html"> Đăng Nhập </a></p>
+            </div> 
+        </div>
+        
+        <button class="login-btn" onclick="validateSignupForm()">Đăng Ký</button>
+        <div class="login">
+            <p>Đã có tài khoản <a href="login.html"> Đăng Nhập </a></p>
+          </div>
+        <div class="or" style="font-size: 15px;font-weight: 600">Hoặc tiếp tục với</div>
+        <div class="list">
+            <div class="item" >
+                <a href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNzAzNzcyMzI4LCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D"><img src="images/facebook.png" alt="facebook"></a>
             </div>
+            <div class="item">
+                <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3Dfacebook%26oq%3Dface%26gs_lcrp%3DEgZjaHJvbWUqEAgAEAAYgwEYsQMYyQMYgAQyEAgAEAAYgwEYsQMYyQMYgAQyBggBEEUYOTIKCAIQABixAxiABDIHCAMQABiABDINCAQQABiDARixAxiABDIHCAUQABiABDINCAYQABiSAxiABBiKBTIGCAcQBRhA0gEIMTE2OGowajeoAgCwAgA%26sourceid%3Dchrome%26ie%3DUTF-8&ec=GAZAAQ&hl=vi&ifkv=ASKXGp1PeoFBI_J81M9AWBjjmWu1q4MRnmA9zeDkvipJ4Au47tDAQ-HL9cl6V9Zs_tdEJast3_5axQ&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1711196161%3A1703772381869301&theme=glif"><img src="images/google.png" alt="google"></a>
             </div>
-          </form>
+            <div class="item">
+                <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="instgram"> </a>
+            </div>
         </div>
       </div>
-    </section>
-</body>
+    </div>
+  </section>
     <!--Footer-->
     <footer id="footer" class="footer-1 mt-4">
         <div class="main-footer widgets-dark typo-light">
-            <div class="container">
+            <div class="containers" style="margin-left: 100px;">
                 <div class="row">
-    
+      
                     <div class="col-xs-12 col-sm-6 col-md-3">
                         <div class="widget subscribe no-box">
                             <h5 class="widget-title">LumièreLuxe-Luxury Light<span></span></h5>
-                            <p>LumièreLuxe: Định nghĩa lại sự rực rỡ với sự sang trọng vô song. Chiếu sáng không
+                            <p style="text-align:justify; width: 230px;"> Định nghĩa lại sự rực rỡ với sự sang trọng vô song. Chiếu sáng không
                                 gian của bạn bằng đèn chùm vượt thời gian của chúng tôi, nơi sự sang trọng gặp ánh sáng. Trải nghiệm nghệ
                                 thuật rạng rỡ..</p>
                         </div>
                     </div>
-    
+      
                     <div class="col-xs-12 col-sm-6 col-md-3">
                         <div class="widget no-box">
                             <h5 class="widget-title">Dịch vụ<span></span></h5>
@@ -264,12 +282,12 @@
                             </ul>
                         </div>
                     </div>
-    
+      
                     <div class="col-xs-12 col-sm-6 col-md-3">
                         <div class="widget no-box">
                             <h5 class="widget-title">Thông tin liên hệ<span></span></h5>
                             <ul class="contactList">
-                                <li><i class="fas fa-map-marker-alt"></i>Địa chỉ: 12 Chùa Bộc, Đống Đa, Hà Nội</li>
+                                <li><i class="fas fa-map-marker-alt" ></i>Địa chỉ: 12 Chùa Bộc, Đống Đa, Hà Nội</li>
                                 <li><i class="fas fa-phone-alt"></i>SĐT: 090 7676 195</li>
                                 <li><i class="fas fa-envelope"></i>Email: LumièreLuxe@gmail.com</li>
                             </ul>
@@ -295,30 +313,29 @@
                     </div>
                     
                     
-    
+      
                     <div class="col-xs-12 col-sm-6 col-md-3">
-    
-                        <div class="widget no-box">
-                            <h5 class="widget-title">Đường đến LumièreLuxe<span></span></h5>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.601945519024!2d105.82584720928297!3d21.00858748839333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac8041a9648d%3A0xe487dd495fdfd676!2zMTIgUC4gQ2jDuWEgQuG7mWMsIFF1YW5nIFRydW5nLCDEkOG7kW5nIMSQYSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1701191037303!5m2!1svi!2s" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      
+                        <div class="widget no-box" >
+                            <h5 class="widget-title" style="margin-left: 30px;">Đường đến LumièreLuxe<span></span></h5>
+                            <iframe style="height: 250px; width:250px; margin-left: 30px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.601945519024!2d105.82584720928297!3d21.00858748839333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac8041a9648d%3A0xe487dd495fdfd676!2zMTIgUC4gQ2jDuWEgQuG7mWMsIFF1YW5nIFRydW5nLCDEkOG7kW5nIMSQYSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1701191037303!5m2!1svi!2s" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             
                         </div>
                     </div>
-    
+      
                 </div>
             </div>
         </div>
-    
+      
         <div class="footer-copyright">
-            <div class="container">
+            <div class="containers" style="padding: 0px;">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <p>Copyright LumièreLuxe © 2023. All rights reserved.</p>
+                        <p style="margin-left: 450px; margin-left: 100px;">Copyright LumièreLuxe © 2023. All rights reserved.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
-    </html>
-    
-        
+      </footer>
+</body>
+</html>
