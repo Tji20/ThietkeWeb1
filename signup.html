@@ -10,7 +10,7 @@
       <link rel="stylesheet" href="login.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><!--icon-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"><!--font awesome-->
-      <link rel="stylesheet" href="home.css">
+      <link rel="stylesheet" href="footer.css">
       <link rel="shortcut icon" type="image/png" href="favicon.ico">
       <script src="script.js"></script>
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -25,11 +25,11 @@
                 </div>
                 <div class="col-md-6 text-md-right">
                     <div class="additional-actions">
-                        <a href="login.html" class="header-action";>
+                        <a href="#" class="header-action";">
                             <i class="material-icons" style="color: white;">account_circle</i> 
                             Đăng nhập / Đăng ký
                         </a>
-                        <a href="shopping-cart.html" class="header-action">
+                        <a href="#" class="header-action">
                             <i class="material-icons"style="color: white;">shopping_cart</i> 
                             Giỏ hàng
                         </a>
@@ -55,7 +55,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Trang chủ <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="test.html">Trang chủ <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown mega-menu">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -169,20 +169,11 @@
                         <a class="dropdown-item" href="#">Sửa chữa</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Tin tức
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="blog.html">LumièreLuxe - Đèn chùm hiện đại trong trang trí nhà cửa</a>
-                        <a class="dropdown-item" href="#">LumièreLuxe - Những xu hướng lựa chọn đèn trang trí</a>
-                        <a class="dropdown-item" href="#">LumièreLuxe - 5 nguyên tắc lựa chọn đèn trang trí</a>
-                        <a class="dropdown-item" href="#">LumièreLuxe - Cách chọn đèn trang trí cho biệt thự, nhà phố</a>
-                    </div>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Tin Tức</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Liên hệ</a>
+                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Giới thiệu</a>
                 </li>
             </ul>
             <div class="search-container">
@@ -215,7 +206,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="images/banner3.png" class="d-block w-100" alt="...">
+                <img src="https://via.placeholder.com/1200x400" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                 </div>
             </div>
@@ -228,51 +219,48 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
-    </div>
-    <!--Forget-->
+    </div>  
+    <!--Signup-->
     <section>
       <div class="form-box">
         <div class="form-value">
           <form action="">
-            <h2 style="color: #333">KHÔI PHỤC MẬT KHẨU</h2>
-      <div class="inputbox">
-        <icon-icon name="phone"></icon-icon>
-        <input type="tel" required />
-        <label for="">Nhập số điện thoại hoặc email</label>
-      </div> 
-      <button type="button" onclick="sendResetRequest()">Gửi yêu cầu khôi phục</button>
-            <div class="register">
-              <p>Chưa có tài khoản <a href="signup.html"> Đăng Ký </a></p>
+            <h2 style="color: #333">ĐĂNG KÝ</h2>
+            <div class="inputbox">
+             
+              <input type="text" required />
+              <label for="">Họ Tên</label>
+             </div>           
+            <div class="inputbox">
+                <icon-icon name="phone"></icon-icon>
+                <input type="tel" required />
+                <label for="">Số điện thoại</label>
+              </div>    
+              <div class="inputbox">
+                <icon-icon name="lock-closed-outline"></icon-icon>
+                <input type="email" required />
+                <label for="">Email</label>
+              </div>        
+            <div class="inputbox">
+              <icon-icon name="lock-closed-outline"></icon-icon>
+              <input type="password" required />
+              <label for="">Mật khẩu</label>
+            </div>
+            <div class="gender">
+                <label for="">
+                  <input class="radio" type="radio" name="gender" />Nữ
+                  <input class="radio" type="radio" name="gender" />Nam
+                </label>
+              </div>  
+            <button><a href="#"></a>Đăng Ký</button>
+            <div class="login">
+              <p>Đã có tài khoản <a href="login.html"> Đăng Nhập </a></p>
+            </div>
             </div>
           </form>
         </div>
       </div>
     </section>
-    <script>
-      function sendResetRequest() {
-    // Lấy giá trị số điện thoại hoặc email từ ô input
-    var identifier = document.getElementById('identifier').value;
-
-    // Kiểm tra xem số điện thoại hoặc email có hợp lệ không
-    if (!validateIdentifier(identifier)) {
-        alert('Vui lòng nhập một số điện thoại hoặc email hợp lệ.');
-        return;
-    }
-
-    // Gửi yêu cầu khôi phục mật khẩu (trong thực tế, bạn sẽ gửi request đến server)
-    // Ở đây, chúng ta chỉ hiển thị một thông báo giả định
-    var responseMessage = document.getElementById('responseMessage');
-    responseMessage.innerHTML = 'Một yêu cầu khôi phục đã được gửi đến ' + identifier;
-}
-
-function validateIdentifier(identifier) {
-    // Sử dụng một biểu thức chính quy đơn giản để kiểm tra số điện thoại hoặc email
-    var identifierRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Biểu thức cho email
-    var phoneRegex = /^[0-9]{10}$/; // Biểu thức cho số điện thoại (10 chữ số)
-
-    return identifierRegex.test(identifier) || phoneRegex.test(identifier);
-}
-    </script>
     <!--Footer-->
     <footer id="footer" class="footer-1 mt-4">
       <div class="main-footer widgets-dark typo-light">
