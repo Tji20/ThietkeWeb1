@@ -153,7 +153,7 @@
                         Dịch vụ
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="dịch vụ giao hàng.html">Giao hàng</a>
+                        <a class="dropdown-item" href="#">Giao hàng</a>
                         <a class="dropdown-item" href="#">Lắp đặt</a>
                         <a class="dropdown-item" href="#">Sửa chữa</a>
                     </div>
@@ -337,5 +337,21 @@
             </div>
         </div>
       </footer>
+      <script>
+        function validateSignupForm() {
+            var name = document.getElementById("name").value;
+            var phonenumber = document.getElementById("phonenumber").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+
+            if (!name || !phonenumber || !email || !password || !gender) {
+                alert("Vui lòng nhập đầy đủ thông tin đăng ký.");
+            } else {
+                alert("Đăng ký thành công!");
+                window.location.href = "index.html";
+            }
+        }
+      </script>
 </body>
 </html>

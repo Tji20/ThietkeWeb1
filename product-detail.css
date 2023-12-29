@@ -1,4 +1,3 @@
-
 header h1 {
   font-size: 40px;
   text-align: left; 
@@ -14,7 +13,7 @@ header {
   height: 50px; /* Đặt chiều cao của hình ảnh */
   width: 50px; /* Đặt chiều rộng của hình ảnh */
   display: block; /* Chuyển đổi hình ảnh thành phần tử block để có thể sử dụng margin và padding */
-  margin: 10px; /* Thêm margin nếu cần thiết */
+  margin: 10px; 
 }
 
 .banner {
@@ -25,24 +24,37 @@ header {
 
 .banner img {
   width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng của banner */
-  height: 300px; /* Giữ tỉ lệ khung hình khi thay đổi kích thước */
+  height: 300px; 
   display: block; /* Chuyển đổi hình ảnh thành phần tử block */
 }
+@media screen and (max-width: 768px) {
+  header {
+    height: auto; /* Tùy chỉnh chiều cao của header cho các thiết bị có độ rộng màn hình nhỏ hơn 768px */
+  }
 
+  .logo-img {
+    height: 40px; /* Đặt chiều cao nhỏ hơn cho màn hình nhỏ hơn 768px */
+    width: 40px; /* Đặt chiều rộng nhỏ hơn cho màn hình nhỏ hơn 768px */
+  }
+
+  .banner img {
+    height: auto; /* Giữ nguyên chiều cao tự động để hình ảnh không bị méo */
+  }
+}
 
 .container{
-    max-width: 1200px;
+    max-width: 1200px; /*Giới hạn chiều rộng tối đa của container*/
     padding: 0 1rem;
     margin: 0 auto;
 }
 .product-div{
-    margin: 1rem 0;
-    padding: 2rem 0;
+    margin: 1rem 0; 
+    padding: 1rem 0;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /*Số cột trong grid và độ rộng của mỗi cột*/
     background-color: #fff;
     border-radius: 3px;
-    column-gap: 10px;
+    column-gap: 10px; /*Khoảng cách giữa các cột trong grid*/
 }
 .product-div-left{
     padding: 50px;
@@ -62,23 +74,23 @@ header {
     margin-top: 32px;
 }
 .hover-container div{
-    border: 2px solid rgba(252, 160, 175, 0.7);
+    border: 2px solid rgba(252, 160, 175, 0.7); /* Viền của hộ chứa ảnh */
     padding: 1rem;
-    border-radius: 3px;
-    margin: 0 4px 8px 4px;
+    border-radius: 3px; /* Bo góc của hộ chứa ảnh */
+    margin: 0 4px 8px 4px; /* khoảng cách giữa các hộp chứa ảnh*/
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .active{
-    border-color: rgb(255, 145, 163)!important;
+    border-color: rgb(255, 145, 163)!important; /*  Màu viền khi được chọn, có độ ưu tiên cao */
 }
 .hover-container div:hover{
-    border-color: rgb(255, 145, 163);
+    border-color: rgb(255, 145, 163); /*Màu viền khi di chuột vào hộp chứa ảnh*/
 }
 .hover-container div img{
     width: 50px;
-    cursor: pointer;
+    cursor: pointer; /* Con trỏ khi di chuột vào ảnh*/
 }
 .product-div-right span{
     display: block;
@@ -87,12 +99,12 @@ header {
     font-size: 26px;
     margin-bottom: 22px;
     font-weight: 700;
-    letter-spacing: 1px;
-    opacity: 0.9;
+    letter-spacing: 1px; /*Khoảng cách giữa các ký tự*/
+    opacity: 0.9; /*Độ mờ của văn bản*/
 }
 .product-price{
     font-weight: 700;
-    font-size: 24px;
+    font-size: 24px; 
     opacity: 0.9;
     font-weight: 500;
 }
@@ -100,9 +112,11 @@ header {
     display: flex;
     align-items: center;
     margin-top: 12px;
+    margin-right: 46%;
 }
 .product-rating span{
     margin-right: 6px;
+
 }
 .product-description{
     font-weight: 18px;
@@ -118,14 +132,14 @@ header {
     display: inline-block;
     font-size: 16px;
     font-family: inherit;
-    text-transform: uppercase;
+    text-transform: uppercase; /*Chuyển đổi văn bản thành chữ in hoa*/
     padding: 15px 16px;
     color: #fff;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /*Hiệu ứng chuyển động cho tất cả thuộc tính, thời gian 0.3 giây, dễ dàng*/
 }
 .btn-groups button .fas{
-    margin-right: 8px;
+    margin-right: 8px; /*Khoảng cách từ phải sang trái giữa biểu tượng và văn bản*/
 }
 .add-cart-btn{
     background-color: #FF9F00;
@@ -138,37 +152,44 @@ header {
 }
 .buy-now-btn{
     background-color: #000;
-    border: 2px solid #000;
+    border: 2px solid #000; /*Viền của nút mua ngay*/
 }
 .buy-now-btn:hover{
-    background-color: #fff;
+    background-color: #fff; /*Màu nền khi di chuột vào nút mua ngay*/
     color: #000;
 }
 
-@media screen and (max-width: 992px){
-    .product-div{
-        grid-template-columns: 100%;
-    }
-    .product-div-right{
-        text-align: center;
-    }
-    .product-rating{
-        justify-content: center;
-    }
-    .product-description{
-        max-width: 400px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-}
 
-@media screen and (max-width: 400px){
-    .btn-groups button{
-        width: 100%;
-        margin-bottom: 10px;
-    }
-}
+@media screen and (max-width: 768px) {
+  .product-div {
+    grid-template-columns: 1fr; /* Chuyển sang một cột */
+  }
 
+  .product-div-left, .product-div-right {
+    padding: 20px; /* Giảm khoảng cách giữa phần left và right */
+  }
+
+  .img-container img {
+    width: 100%; /* Ảnh chiếm toàn bộ chiều rộng của phần container */
+    margin: 0; /* Loại bỏ margin để ảnh không bị lệch */
+  }
+
+  .hover-container {
+    margin-top: 16px; /* Giảm khoảng cách giữa hover-container và product-div */
+    display: flex;
+    flex-direction: row; /* Đưa tất cả các ảnh về một hàng */
+    overflow-x: auto; /* Cho phép cuộn nếu nội dung vượt khỏi chiều rộng */
+  }
+
+  .hover-container div {
+    margin: 0 4px 8px 0; /* Điều chỉnh khoảng cách giữa các hộp chứa ảnh */
+  }
+
+  .product-rating {
+    margin-top: 12px;
+    margin-right: 0; /* Đưa về giữa */
+  }
+}
 
 /*mô tả sản phẩm*/
   .tabs {
@@ -255,7 +276,7 @@ header {
  
 
 
-  /*tap thông tin sản phẩm*/
+  /*tab thông tin sản phẩm*/
   .tabs {
     display: flex;
     position: relative;
@@ -395,9 +416,9 @@ header {
   .card {
       width: 100%;
       height: 300px;
-      transform-style: preserve-3d;
+      transform-style: preserve-3d; /* Bảo toàn chất lượng 3D của các phần tử con */
       perspective: 500px;
-      border: none;
+      border: none; /* Không có đường viền */
       background-color: inherit;
   }
   
@@ -411,15 +432,16 @@ header {
       background: #fff;
       transform-style: preserve-3d;
       transition: 0.5s;
-      backface-visibility: hidden;
-  }
+      backface-visibility: hidden; /* Ẩn phần sau của các phần tử 3D khi đang xoay */
+    }
+
   .card .box.front{
       background-image: url(img/pattern.png);
       background-repeat: repeat;
   }
   .card .box.front,
   .card .box.back {
-      position: absolute;
+      position: absolute; /* Đặt vị trí tuyệt đối để kiểm soát vị trí */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -430,13 +452,13 @@ header {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
     border: 5px solid #262626;
     margin-bottom: 25px;
   }
   
   .card:hover .box.front {
-      transform: rotateY(180deg);
+      transform: rotateY(180deg); /* Xoay theo trục Y 180 độ */
   }
   .box.front h2 {
     font-family: 'Bebas Neue', cursive;
@@ -454,7 +476,7 @@ header {
       transform: rotateY(180deg);
       padding: 20px 30px;
       text-align: center;
-      user-select: none;
+      user-select: none; 
   }
   
   .card .box.back .fa-quote-left {
@@ -467,7 +489,8 @@ header {
   .card:hover .box.back {
       transform: rotateY(360deg);
   }
-  
+
+  /* Kiểm soát kiểu dáng tại các kích thước màn hình nhỏ hơn hoặc bằng 991.5px */
   @media(max-width: 991.5px) {
       .col-lg-4 {
           margin-top: 40px;
@@ -560,3 +583,7 @@ header {
     text-align: center; /* Căn giữa theo chiều ngang */
     margin-top: 70px; /* Thêm khoảng cách phía trên nếu cần thiết */
 }
+
+
+
+  
