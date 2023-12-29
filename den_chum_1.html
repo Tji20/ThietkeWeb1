@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Đèn chùm</title>
+    <title>LumièreLuxe</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><!--icon-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"><!--font awesome-->
-    <link rel="stylesheet" href="your.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="chuyenmuc.css">
     <link rel="shortcut icon" type="image/png" href="favicon.ico">
     <script src="script.js"></script>
     <!--JS-->
@@ -18,285 +19,18 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <link rel="stylesheet" href="denchum.css">
    
 </head>
-<style>
-    
-    body {
-     font-family: 'Arial', sans-serif;
-     margin: 0;
-     padding: 0;
-     background-color: white;
-     
- }
- 
- .container {
-     display: flex;
-     justify-content: flex-start;
-     padding: 20px;
-     margin-left: 0px;
- }
- 
- .sidebar {
-     width: 250px;
-     background-color:#fff;
-     color: #fff;
-     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
- }
- 
- .sidebar-section {
-     padding: 10px;
-     border-bottom: 1px solid #333;
- }
- 
- .sidebar-section:last-child {
-     border-bottom: none;
- }
- 
- .sidebar-section h2 {
-     color: black;
-     margin-bottom: 15px;
- }
- 
- .sidebar ul {
-     list-style-type: none;
-     padding: 0;
-     margin: 0;
- }
- 
- .sidebar li {
-     margin-bottom: 10px;
-     color: black;
- }
- 
- .sidebar a {
-     text-decoration: none;
-     color: black;
-     display: block;
-     align-items: center;
-     transition: color 0.3s ease-in-out;
- }
- 
- .sidebar img {
-     width: 220px;
-     height: 220px;
-     margin-right: 10px;
-     border-radius: 0;
-     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Hiệu ứng transition */
- }
- 
- .sidebar img:hover {
-     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Đổ bóng khi di chuột vào */
- }
- 
- .sidebar a:hover {
-     color: #8B008B
- }
- 
- .product-container {
-     
-     display: flex;
-     background-color: white;
-     border: 1px solid #ddd;
-     margin: 20px;
-     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-     flex-wrap: wrap;
-     box-sizing: border-box;
-     justify-content: space-around;
-     height: 550px;
-     width: 300px;
- }
- 
- 
- .product-img {
-     position: relative;
-     overflow: hidden;
-     transition: transform 0.3s ease-in-out;
-     display: block; /* Để loại bỏ khoảng trắng ở phía dưới ảnh nếu là phần tử inline */
-     margin: 0 auto; /* Căn giữa ảnh trong phần tử cha */
- }
- 
- .product-img img {
-     max-width: 100%;
-     height: auto;
-     transition: transform 0.3s ease-in-out;
- }
- 
- .product-img:hover img {
-     transform: scale(1.1);
- }
- 
- .product-details {
-     margin-left: 15px;
- }
- 
- .product-container:hover .product-detail {
-     display: block;
- }
- 
- .product-name {
-     font-size: 18px;
-     margin: 0;
-     color: #333;
- }
- 
- .product-price {
-     margin: 10px 0;
-     color: rgb(204, 58, 58);
-     text-align: center;
- }
- .discounted-price {
-     font-weight: bold;
- }
- 
- .original-price {
-     color: #200505;
-     text-align: center;
- }
- 
- .line-through {
-     text-decoration: line-through;
- }
- 
- .product-rating img {
-     height: 18px;
-     width: 90px;
-     display: block; /* Đặt thành block để sử dụng margin auto */
-     margin-left: auto;
-     margin-right: auto;
- }
- 
- .purchase-count {
-     font-size: 13px;
-     margin: 0;
-     color: #333;
-     text-align: center;
- }
- 
- #priceFilter {
-     display: flex;
-     flex-direction: column;
-     align-items: flex-start;
- }
- 
- /* Style for labels */
- #priceFilter label {
-     font-weight: bold;
-     margin-bottom: 0px;
- }
- 
- /* Style for input fields */
- #priceFilter input[type="number"] {
-     width: 150px;
-     padding: 8px;
-     border: 1px solid #ccc;
-     border-radius: 5px;
-     margin-bottom: 0px;
- }
- 
- /* Style for the filter button */
- #priceFilter button {
-     padding: 8px 15px;
-     background-color: #BF9850;
-     color: white;
-     border: none;
-     border-radius: 5px;
-     cursor: pointer;
-     transition: background-color 0.3s ease;
- }
- 
- /* Hover effect for the filter button */
- #priceFilter button:hover {
-     background-color: #175252;
- }
- 
- .action-buttons {
-     display: flex;
-     align-items: center;
- }
- 
- .add-to-cart-icon {
-     height: 70px;
-     width: 70px;
-     margin-right: 5px;
- }
- 
- .add-to-cart-btn, .buy-now-btn {
-     background-color: #BF9850;
-     color: #fff;
-     padding: 10px;
-     border: none;
-     border-radius: 5px;
-     cursor: pointer;
-     margin-right: 10px;
- }
- 
- .add-to-cart-btn:hover, .buy-now-btn:hover {
-     background-color: #175252;
- }
- header {
-             text-align: center;
-         }
- 
-         .headline {
-             display: inline-block;
-             background-color: black; /* Màu nền nâu */
-             padding: 0px;
-             margin-left: 13%;
-             transition: background-color 0.3s ease, transform 0.3s ease;
-         }
- 
-         .headline:hover {
-             background-color: #654321; /* Màu nền nâu đậm khi hover */
-             transform: scale(1.1); /* Phóng to khi hover */}
- 
-         h2 {
-             margin: 0;
-             color: rgb(191, 152, 80); /* Màu chữ vàng */
-             border-radius: 0%;
-         }
- 
-         ul.pagination {
-             display: inline-block;
-             padding: 0;
-             margin: 20px 0;
-         }
- 
-         ul.pagination li {
-             display: inline;
-             font-size: 16px;
-             padding: 8px 16px;
-             text-decoration: none;
-             list-style-type: none;
-             cursor: pointer;
-             border: 1px solid #ddd;
-             margin: 0 4px;
-             color: black;
-         }
- 
-         ul.pagination li.active {
-             background-color: #4CAF50;
-             color: white;
-             border: 1px solid #4CAF50;
-         }
- 
-         ul.pagination li:hover:not(.active) {
-             background-color: #ddd;
-         }
- 
- 
- </style>
 
 <body>
     <header class="bg-dark text-white text-center py-2">
-        <div class="containers">
+        <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 text-md-left">
-                    <h1 style="margin-left: 100px;">LumièreLuxe</h1>
+                    <h1>LumièreLuxe</h1>
                 </div>
                 <div class="col-md-6 text-md-right">
-                    <div class="additional-actions" style="margin-left: 100px; margin-right: 120px;" >
+                    <div class="additional-actions">
                         <a href="login.html" class="header-action";>
                             <i class="material-icons" style="color: white;">account_circle</i> 
                             Đăng nhập / Đăng ký
@@ -484,290 +218,642 @@
         </a>
     </div>
 
-    <header>
-        <div class="headline" >
-            <h2 style="text-align: center;">Đèn chùm cao cấp (33 sản phẩm) </h3>
-        </div>
-    </header>
+    <div class="row mt-4">
+        
+        <!-- Tin tức bên trái -->
+        <aside class="col-md-2"id="news">
+            <div class="sidebar-section">
+                <h2>Lọc Giá</h2>
+                <form id="priceFilter" style="height: 150px;">
+                    <div class="form-group">
+                        <select id="Filter" style="height: 40px;" required>
+                            <option value="Default">Mặc định</option>
+                            <option value="MinMax">Giá từ cao đến thấp</option>
+                            <option value="MaxMin">Giá từ thấp đến cao</option>
+                            <option value="between">Giá từ 5tr-10tr</option>
+                            <option value="between">Giá từ 10tr-15tr</option>
+                            <option value="between">Giá từ 15tr-20tr</option>
+                            <option value="between">Giá từ 20tr đổ lên</option>
+                        </select>
+                        <button type="button" style="background-color: #BF9850;" onclick="filterProducts()">Lọc</button>
+                    </div>
+                </form>
+            </div>
 
-    <main>
-    <div class="container" >
-    <div class="sidebar" >
-
-        <div class="sidebar-section">
-            <h2>Lọc Giá</h2>
-            <form id="priceFilter" style="height: 150px;">
-                <div class="form-group">
-                    <select id="Filter" style="height: 40px;" required>
-                        <option value="Default">Mặc định</option>
-                        <option value="MinMax">Giá từ cao đến thấp</option>
-                        <option value="MaxMin">Giá từ thấp đến cao</option>
-                        <option value="between">Giá từ 5tr-10tr</option>
-                        <option value="between">Giá từ 10tr-15tr</option>
-                        <option value="between">Giá từ 15tr-20tr</option>
-                        <option value="between">Giá từ 20tr đổ lên</option>
-                    </select>
-                    <button type="button" onclick="filterProducts()">Lọc</button>
+            
+            <h2 style="color:rgb(191, 152, 80); font-size: 25px;">Tin tức nổi bật</h2>
+            <div class="card ml-2">
+                <img src="https://denchauau.vn/media/product/den-chum-nen-1.jpg" class="card-img-top" alt="News Image">
+                <div class="card-body">
+                    <a href="blog.html" class="card-title" style="text-decoration: none; color: inherit;">
+                        <h5 class="card-title">LumièreLuxe - Đèn chùm hiện đại trong trang trí nhà cửa</h5></a>
+                    <p class="card-text">Ngày nay, đèn trang trí nói chung và đèn chùm nói riêng luôn là một phần không thể
+                        thiếu trong mỗi căn nhà. Đèn chùm hiện đại đang là xu hướng lựa chọn của các gia đình trẻ. Các hãng sản xuất
+                        đèn…</p>
                 </div>
-            </form>
+            </div>
+
+            <div class="card ml-2 mt-4">
+                <img src="https://denchauau.vn/media/product/den-tha-nghe-thuat-th886.jpg" class="card-img-top" alt="News Image">
+                <div class="card-body">
+                    <a href="blog.html" class="card-title" style="text-decoration: none; color: inherit;">
+                    <h5 class="card-title">LumièreLuxe - Những xu hướng lựa chọn đèn trang trí</h5></a>
+                    <p class="card-text">Hướng dẫn chọn đèn trang trí cho căn nhà của bạn Trong trang trí nội thất, đèn trang
+                        trí có vai trò vô cùng quan trọng giúp tô điểm thêm cho căn nhà. Bên cạnh những ánh sáng tự nhiên, ánh sáng …</p>
+                </div>
+            </div>
+
+            <div class="card ml-2 mt-4">
+                <img src="https://decordi.vn/wp-content/uploads/2021/08/den-am-tran.jpg" class="card-img-top" alt="News Image">
+                <div class="card-body">
+                    <a href="link_to_your_blog" class="card-title" style="text-decoration: none; color: inherit;">
+                    <h5 class="card-title">LumièreLuxe - 5 nguyên tắc lựa chọn đèn trang trí</h5></a>
+                    <p class="card-text">Hiện nay trên thị trường đèn trang trí sản phẩm rất đa dạng và phong phú tuy nhiên để
+                        lựa chọn được đèn trang trí phù hợp công năng cũng như phong thủy của ngôi nhà. LumièreLuxe sẽ giúp bạn …</p>
+                </div>
+            </div>
+
+
+            <h2 style="color:rgb(191, 152, 80); font-size: 25px;">Khuyến mãi</h2>
+            <div class="card ml-2">
+                <img src="images/giangsinh.jpg" class="card-img-top" alt="News Image">
+                <div class="card-body">
+                    <a href="blog.html" class="card-title" style="text-decoration: none; color: inherit;">
+                        <h5 class="card-title">Chương trình khuyến mãi giáng sinh</p>
+                </div>
+            </div>
+
+            <div class="card ml-2">
+                <img src="images/bf.jpg" class="card-img-top" alt="News Image">
+                <div class="card-body">
+                    <a href="blog.html" class="card-title" style="text-decoration: none; color: inherit;">
+                        <h5 class="card-title">Chương trình khuyến mãi Black Friday</p>
+                </div>
+            </div>
+
+            <div class="card ml-2">
+                <img src="images/tet.jpg" class="card-img-top" alt="News Image">
+                <div class="card-body">
+                    <a href="blog.html" class="card-title" style="text-decoration: none; color: inherit;">
+                        <h5 class="card-title">Chương trình khuyến mãi Tết</p>
+                </div>
+            </div>
+        </aside>
+        <div class="container col-md-8">
+            <div class="row">
+                <!-- Sản phẩm -->
+                <div class="col">
+                    <a href="">
+                        <h3 style="color:rgb(191, 152, 80)">Đèn chùm pha lê</h3>
+                    </a>
+                    <div class="row">
+                        <!-- Sản phẩm 1 -->
+                        <div class="col-md-3 col-sm-3 mb-4">
+                            <div class="card">
+                                <img src="images/pr1a.jpg" class="card-img-top" alt="Product 5">
+                                <div class="card-body">
+                                    <a href="Đèn Ốp Quạt Trần Ø1000mm MC-KD1364.html" style="text-decoration: none;"><h5 style="color: black;" class="card-title">Đèn chùm pha lê Pháp JSS02</h5></a>
+                                    <div class="box-pro-prices">
+                                        <p class="pro-price highlight">
+                    
+                                          <span>12,950,000 VNĐ</span>
+                    
+                                          <span class="pro-price-del">
+                                            <del class="compare-price">
+                                              16,500,000 VNĐ
+                                            </del>
+                                          </span>
+                                        </p>
+                                        <p class="purchase-count">8 lượt mua</p>
+                                       <div class="action-buttons">
+                                              <img class="add-to-cart-icon" style="height: 50px; width: 50px" src="images/giohang.png" alt="Add to Cart">
+                                                      <button class="buy-now-btn" style="background-color: #BF9850;">MUA NGAY</button>
+                                               </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sản phẩm 2 -->
+                        <div class="col-md-3 col-sm-3 mb-4">
+                            <div class="card">
+                                <img src="images/pr2.jpg" class="card-img-top" alt="Product 5">
+                                <div class="card-body">
+                                    <a href="Đèn Ốp Quạt Trần Ø1000mm MC-KD1364.html" style="text-decoration: none;"><h5 style="color: black;" class="card-title">Đèn chùm pha lê Louis ZFB001</h5></a>
+                                    <div class="box-pro-prices">
+                                        <p class="pro-price highlight">
+                    
+                                          <span>12,650,000 VNĐ</span>
+                    
+                                          <span class="pro-price-del">
+                                            <del class="compare-price">
+                                              13,100,000 VNĐ
+                                            </del>
+                                          </span>
+                                        </p>
+                                        <p class="purchase-count">42 lượt mua</p>
+                                          <div class="action-buttons">
+                                             <img class="add-to-cart-icon" style="height: 50px; width: 50px" src="images/giohang.png" alt="Add to Cart">
+                                                  <button class="buy-now-btn" style="background-color: #BF9850;">MUA NGAY</button>
+                                                 </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-sm-3 mb-4">
+                            <div class="card">
+                                <img src="images/pr3.jpg" class="card-img-top" alt="Product 5">
+                                <div class="card-body">
+                                    <a href="Đèn Ốp Quạt Trần Ø1000mm MC-KD1364.html" style="text-decoration: none;"><h5 style="color: black;" class="card-title">Đèn chùm pha lê Hermes ZFB005</h5></a>
+                                    <div class="box-pro-prices">
+                                        <p class="pro-price highlight">
+                    
+                                          <span>22,500,000 VNĐ</span>
+                    
+                                          <span class="pro-price-del">
+                                            <del class="compare-price">
+                                              26,300,000 VNĐ
+                                            </del>
+                                          </span>
+                                        </p>
+                                        <p class="purchase-count">400 lượt mua</p>
+                                          <div class="action-buttons">
+                                             <img class="add-to-cart-icon" style="height: 50px; width: 50px" src="images/giohang.png" alt="Add to Cart">
+                                                  <button class="buy-now-btn" style="background-color: #BF9850;">MUA NGAY</button>
+                                                 </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-3 col-sm-3 mb-4">
+                            <div class="card">
+                                <img src="images/pr4a.jpg" class="card-img-top" alt="Product 5">
+                                <div class="card-body">
+                                    <a href="Đèn Ốp Quạt Trần Ø1000mm MC-KD1364.html" style="text-decoration: none;"><h5 style="color: black;" class="card-title">Đèn chùm Burberry ZFB002</h5></a>
+                                    <div class="box-pro-prices">
+                                        <p class="pro-price highlight">
+                    
+                                          <span>12,870,000 VNĐ</span>
+                    
+                                          <span class="pro-price-del">
+                                            <del class="compare-price">
+                                              14,300,000 VNĐ
+                                            </del>
+                                          </span>
+                                        </p>
+                                        <p class="purchase-count">60 lượt mua</p>
+                                          <div class="action-buttons">
+                                             <img class="add-to-cart-icon" style="height: 50px; width: 50px" src="images/giohang.png" alt="Add to Cart">
+                                                  <button class="buy-now-btn" style="background-color: #BF9850;">MUA NGAY</button>
+                                                 </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+
+                          
+                    
+
+                
+                        <!-- Sản phẩm 4 -->
+                        <div class="col-md-3 col-sm-3 mb-4">
+                            <div class="card">
+                                <img src="images/pr5.png" class="card-img-top" alt="Product 5">
+                                <div class="card-body">
+                                    <a href="Đèn Ốp Quạt Trần Ø1000mm MC-KD1364.html" style="text-decoration: none;"><h5 style="color: black;" class="card-title">Đèn chùm pha lê Pháp ZFB004</h5></a>
+                                    <div class="box-pro-prices">
+                                        <p class="pro-price highlight">
+                    
+                                          <span>14,800,000 VNĐ</span>
+                    
+                                          <span class="pro-price-del">
+                                            <del class="compare-price">
+                                              14,900,000 VNĐ
+                                            </del>
+                                          </span>
+                                        </p>
+                                        <p class="purchase-count">68 lượt mua</p>
+                                          <div class="action-buttons">
+                                             <img class="add-to-cart-icon" style="height: 50px; width: 50px" src="images/giohang.png" alt="Add to Cart">
+                                                  <button class="buy-now-btn" style="background-color: #BF9850;">MUA NGAY</button>
+                                                 </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sản phẩm 5 -->
+                        <div class="col-md-3 col-sm-3 mb-4">
+                            <div class="card">
+                                <img src="images/pr6a.jpg" class="card-img-top" alt="Product 5">
+                                <div class="card-body">
+                                    <a href="Đèn Ốp Quạt Trần Ø1000mm MC-KD1364.html" style="text-decoration: none;"><h5 style="color: black;" class="card-title">Đèn chùm pha lê Stellaer ZFB004</h5></a>
+                                    <div class="box-pro-prices">
+                                        <p class="pro-price highlight">
+                    
+                                          <span>14,800,000 VNĐ</span>
+                    
+                                          <span class="pro-price-del">
+                                            <del class="compare-price">
+                                              14,900,000 VNĐ
+                                            </del>
+                                          </span>
+                                        </p>
+                                        <p class="purchase-count">62 lượt mua</p>
+                                          <div class="action-buttons">
+                                             <img class="add-to-cart-icon" style="height: 50px; width: 50px" src="images/giohang.png" alt="Add to Cart">
+                                                  <button class="buy-now-btn" style="background-color: #BF9850;">MUA NGAY</button>
+                                                 </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sản phẩm 6 -->
+                        <div class="col-md-3 col-sm-3 mb-4">
+                            <div class="card">
+                                <img src="images/pr7.jpg" class="card-img-top" alt="Product 5">
+                                <div class="card-body">
+                                    <a href="Đèn Ốp Quạt Trần Ø1000mm MC-KD1364.html" style="text-decoration: none;"><h5 style="color: black;" class="card-title">Đèn chùm pha lê Ấn ZFB003</h5></a>
+                                    <div class="box-pro-prices">
+                                        <p class="pro-price highlight">
+                    
+                                          <span>18,200,000 VNĐ</span>
+                    
+                                          <span class="pro-price-del">
+                                            <del class="compare-price">
+                                              19,600,000 VNĐ
+                                            </del>
+                                          </span>
+                                        </p>
+                                        <p class="purchase-count">29 lượt mua</p>
+                                          <div class="action-buttons">
+                                             <img class="add-to-cart-icon" style="height: 50px; width: 50px" src="images/giohang.png" alt="Add to Cart">
+                                                  <button class="buy-now-btn" style="background-color: #BF9850;">MUA NGAY</button>
+                                                 </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-3 mb-4">
+                            <div class="card">
+                                <img src="images/pr8a.jpg" class="card-img-top" alt="Product 5">
+                                <div class="card-body">
+                                    <a href="Đèn Ốp Quạt Trần Ø1000mm MC-KD1364.html" style="text-decoration: none;"><h5 style="color: black;" class="card-title">Đèn chùm thiên nga ZFB005</h5></a>
+                                    <div class="box-pro-prices">
+                                        <p class="pro-price highlight">
+                    
+                                          <span>19,200,000 VNĐ</span>
+                    
+                                          <span class="pro-price-del">
+                                            <del class="compare-price">
+                                              19,600,000 VNĐ
+                                            </del>
+                                          </span>
+                                        </p>
+                                        <p class="purchase-count">29 lượt mua</p>
+                                          <div class="action-buttons">
+                                             <img class="add-to-cart-icon" style="height: 50px; width: 50px" src="images/giohang.png" alt="Add to Cart">
+                                                  <button class="buy-now-btn" style="background-color: #BF9850;">MUA NGAY</button>
+                                                 </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-3 col-sm-3 mb-4">
+                            <div class="card">
+                                <img src="images/pr9a.jpg" class="card-img-top" alt="Product 5">
+                                <div class="card-body">
+                                    <a href="Đèn Ốp Quạt Trần Ø1000mm MC-KD1364.html" style="text-decoration: none;"><h5 style="color: black;" class="card-title">Đèn chùm pha lê Versace ZFB007</h5></a>
+                                    <div class="box-pro-prices">
+                                        <p class="pro-price highlight">
+                    
+                                          <span>14,900,000 VNĐ</span>
+                    
+                                          <span class="pro-price-del">
+                                            <del class="compare-price">
+                                              15,200,000 VNĐ
+                                            </del>
+                                          </span>
+                                        </p>
+                                        <p class="purchase-count">34 lượt mua</p>
+                                          <div class="action-buttons">
+                                             <img class="add-to-cart-icon" style="height: 50px; width: 50px" src="images/giohang.png" alt="Add to Cart">
+                                                  <button class="buy-now-btn" style="background-color: #BF9850;">MUA NGAY</button>
+                                                 </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-3 mb-4">
+                            <div class="card">
+                                <img src="images/pr10a.jpg" class="card-img-top" alt="Product 5">
+                                <div class="card-body">
+                                    <a href="Đèn Ốp Quạt Trần Ø1000mm MC-KD1364.html" style="text-decoration: none;"><h5 style="color: black;" class="card-title">Đèn chùm pha lê Prada ZFB008</h5></a>
+                                    <div class="box-pro-prices">
+                                        <p class="pro-price highlight">
+                    
+                                          <span>23,000,000 VNĐ</span>
+                    
+                                          <span class="pro-price-del">
+                                            <del class="compare-price">
+                                              23,700,000 VNĐ
+                                            </del>
+                                          </span>
+                                        </p>
+                                        <p class="purchase-count">42 lượt mua</p>
+                                          <div class="action-buttons">
+                                             <img class="add-to-cart-icon" style="height: 50px; width: 50px" src="images/giohang.png" alt="Add to Cart">
+                                                  <button class="buy-now-btn" style="background-color: #BF9850;">MUA NGAY</button>
+                                                 </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-3 mb-4">
+                            <div class="card">
+                                <img src="images/pr11a.jpg" class="card-img-top" alt="Product 5">
+                                <div class="card-body">
+                                    <a href="Đèn Ốp Quạt Trần Ø1000mm MC-KD1364.html" style="text-decoration: none;"><h5 style="color: black;" class="card-title">Đèn chùm pha lê Ai Cập ZFB005</h5></a>
+                                    <div class="box-pro-prices">
+                                        <p class="pro-price highlight">
+                    
+                                          <span>14,800,000 VNĐ</span>
+                    
+                                          <span class="pro-price-del">
+                                            <del class="compare-price">
+                                              19,700,000 VNĐ
+                                            </del>
+                                          </span>
+                                        </p>
+                                        <p class="purchase-count">55 lượt mua</p>
+                                          <div class="action-buttons">
+                                             <img class="add-to-cart-icon" style="height: 50px; width: 50px" src="images/giohang.png" alt="Add to Cart">
+                                                  <button class="buy-now-btn" style="background-color: #BF9850;">MUA NGAY</button>
+                                                 </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-3 col-sm-3 mb-4">
+                            <div class="card">
+                                <img src="images/pr12.jpg" class="card-img-top" alt="Product 5">
+                                <div class="card-body">
+                                    <a href="Đèn Ốp Quạt Trần Ø1000mm MC-KD1364.html" style="text-decoration: none;"><h5 style="color: black;" class="card-title">Đèn chùm pha lê Miss ZFB005</h5></a>
+                                    <div class="box-pro-prices">
+                                        <p class="pro-price highlight">
+                    
+                                          <span>16,200,000 VNĐ</span>
+                    
+                                          <span class="pro-price-del">
+                                            <del class="compare-price">
+                                              19,700,000 VNĐ
+                                            </del>
+                                          </span>
+                                        </p>
+                                        <p class="purchase-count">79 lượt mua</p>
+                                          <div class="action-buttons">
+                                             <img class="add-to-cart-icon" style="height: 50px; width: 50px" src="images/giohang.png" alt="Add to Cart">
+                                                  <button class="buy-now-btn" style="background-color: #BF9850;">MUA NGAY</button>
+                                                 </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-3 col-sm-3 mb-4">
+                            <div class="card">
+                                <img src="images/pr13.jpg" class="card-img-top" alt="Product 5">
+                                <div class="card-body">
+                                    <a href="Đèn Ốp Quạt Trần Ø1000mm MC-KD1364.html" style="text-decoration: none;"><h5 style="color: black;" class="card-title">Đèn chùm pha lê Fendi ZFB005</h5></a>
+                                    <div class="box-pro-prices">
+                                        <p class="pro-price highlight">
+                    
+                                          <span>22,500,000 VNĐ</span>
+                    
+                                          <span class="pro-price-del">
+                                            <del class="compare-price">
+                                              29,700,000 VNĐ
+                                            </del>
+                                          </span>
+                                        </p>
+                                        <p class="purchase-count">79 lượt mua</p>
+                                          <div class="action-buttons">
+                                             <img class="add-to-cart-icon" style="height: 50px; width: 50px" src="images/giohang.png" alt="Add to Cart">
+                                                  <button class="buy-now-btn" style="background-color: #BF9850;">MUA NGAY</button>
+                                                 </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-3 mb-4">
+                            <div class="card">
+                                <img src="images/pr14.jpg" class="card-img-top" alt="Product 5">
+                                <div class="card-body">
+                                    <a href="Đèn Ốp Quạt Trần Ø1000mm MC-KD1364.html" style="text-decoration: none;"><h5 style="color: black;" class="card-title">Đèn chùm pha lê Conn ZFB002</h5></a>
+                                    <div class="box-pro-prices">
+                                        <p class="pro-price highlight">
+                    
+                                          <span>12,650,000 VNĐ</span>
+                    
+                                          <span class="pro-price-del">
+                                            <del class="compare-price">
+                                              13,700,000 VNĐ
+                                            </del>
+                                          </span>
+                                        </p>
+                                        <p class="purchase-count">88 lượt mua</p>
+                                          <div class="action-buttons">
+                                             <img class="add-to-cart-icon" style="height: 50px; width: 50px" src="images/giohang.png" alt="Add to Cart">
+                                                  <button class="buy-now-btn" style="background-color: #BF9850;">MUA NGAY</button>
+                                                 </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-3 mb-4">
+                            <div class="card">
+                                <img src="images/pr15a.jpg" class="card-img-top" alt="Product 5">
+                                <div class="card-body">
+                                    <a href="Đèn Ốp Quạt Trần Ø1000mm MC-KD1364.html" style="text-decoration: none;"><h5 style="color: black;" class="card-title">Đèn chùm pha lê Việt Nam ZFB002</h5></a>
+                                    <div class="box-pro-prices">
+                                        <p class="pro-price highlight">
+                    
+                                          <span>16,450,000 VNĐ</span>
+                    
+                                          <span class="pro-price-del">
+                                            <del class="compare-price">
+                                              18,700,000 VNĐ
+                                            </del>
+                                          </span>
+                                        </p>
+                                        <p class="purchase-count">88 lượt mua</p>
+                                          <div class="action-buttons">
+                                             <img class="add-to-cart-icon" style="height: 50px; width: 50px" src="images/giohang.png" alt="Add to Cart">
+                                                  <button class="buy-now-btn" style="background-color: #BF9850;">MUA NGAY</button>
+                                                 </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-3 mb-4">
+                            <div class="card">
+                                <img src="images/pr15a.jpg" class="card-img-top" alt="Product 5">
+                                <div class="card-body">
+                                    <a href="Đèn Ốp Quạt Trần Ø1000mm MC-KD1364.html" style="text-decoration: none;"><h5 style="color: black;" class="card-title">Đèn chùm pha lê Gucci ZFB008</h5></a>
+                                    <div class="box-pro-prices">
+                                        <p class="pro-price highlight">
+                    
+                                          <span>21,400,000 VNĐ</span>
+                    
+                                          <span class="pro-price-del">
+                                            <del class="compare-price">
+                                              22,700,000 VNĐ
+                                            </del>
+                                          </span>
+                                        </p>
+                                        <p class="purchase-count">88 lượt mua</p>
+                                          <div class="action-buttons">
+                                             <img class="add-to-cart-icon" style="height: 50px; width: 50px" src="images/giohang.png" alt="Add to Cart">
+                                                  <button class="buy-now-btn" style="background-color: #BF9850;">MUA NGAY</button>
+                                                 </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                                  
+
+
+
+                    
+        
+        
+                    
+                       
+                </div>
+            </div>
+            
         </div>
+    
         
 
-        <div class="sidebar-section">
-        <h2>Sản Phẩm Liên Quan</h2>
-        <ul>
-            <li><a href="đèn chùm pha lê Beanches Anles"><img src="images/pr20a.jpg" alt="Product 3"> Đèn trùm pha lê Branches Anles mang phong cách tinh giản của Milan, nơi tạo ra cái đẹp</a></li>
-            <li><a href="đèn chùm pha lê Thượng Hải"><img src="images/pr16a.jpg" alt="Product 3"> Đèn trùm pha lê Thượng Hải công dụng siêu đặc biệt và chức nằng khác biệt mang lại độc đáo</a></li>
-            <li><a href="đèn chùm pha lê Băc Kinh hiện đại"><img src="images/pr27a.jpg" alt="Product 3"> Đèn trùm pha lê Bắc Kinh hiện đại mang phong thái lãnh đạo cho những công ty doanh nghiệp</a></li>
-        </ul>
-        </div>
-
-        <div class="sidebar-section">
-        <h2>Tin Tức</h2>
-        <ul>
-            <li><a href="Jungkook "><img src="images/Ms_ Jeon♡.jpg" alt="Jungkook">Jungkook BTS chuẩn bị nhập ngũ dù đang thời kì vàng của sự nghiệp</a></li>
-            <li><a href="denvuon"><img src="images/denvuon.jpg" alt="denvuon">Mẫu đèn treo cây vườn nào đang được người dân yêu thích và lên xu hướng</a></li>
-            <li><a href="denparty"><img src="images/denparty.jpg" alt="denparty">Xem ngay 10 mẫu đèn trang trí pary, tiệc cưới hỏi ăn mừng</a></li>
-        </div>
- 
-
-        <div class="sidebar-section">
-        <h2>Khuyến Mãi</h2>
-        <ul>
-            <li><a href="#"> <img src="images/giangsinh.jpg" alt="sfdsg"> Khuyến mãi giáng sinh an lành cho khách hàng thân yêu</a></li>
-            <li><a href="#"> <img src="images/tet.jpg" alt="sfdsg"> Khuyến mãi Tết nguyên đán sum vầy yêu thương</a></li>
-            <li><a href="#"> <img src="images/bf.jpg" alt="sfdsg"> Black Friday giảm giá sốc 50%</a></li>
-            <li><a href="#"> <img src="images/sale.jpg" alt="sfdsg"> Giảm giá shock sinh nhật shop</a></li>
-
-        </ul>
-        </div>
-    </div>
-
-    
-    
-    
-    <div class ="product">
-        <div class="product-container" onmouseover="showProductDetail()" onmouseout="hideProductDetail()" >
-        <div class="product-img">
-            <img class="productImage" src="images/pr1a.jpg" alt="Product" width="280" height="280"  >
-            <div class="product-detail">
-                <a href="Đèn chùm pha lê Úc 24L-ZFB005.html" style="text-decoration: none;"><h3 style="color: black;" class="card-title">Đèn chùm pha lê Úc 24L-ZFB005</h3></a>
-                
-                <p class="product-price"> <span class="discounted-price">8,700,000đ</span></p>
-                <p class="original-price"> <span class="line-through">9,000,000đ</span></p>
-                <p class="purchase-count">232 lượt mua</p>
-                <div class="action-buttons">
-                    <img class="add-to-cart-icon" src="images/giohang.png" alt="Add to Cart">
-                    <button class="add-to-cart-btn" onclick="addToCart()">THÊM VÀO GIỎ HÀNG</button>
-                    <button class="buy-now-btn">MUA NGAY</button>
+        <!-- Đánh giá của khách hàng bên phải -->
+        <aside class="col-md-2" id="customer-reviews">
+            <h2 style="color:rgb(191, 152, 80); font-size: 25px;">Đánh giá từ khách hàng</h2>
+            <div class="card mr-2">
+                <img src="https://ss-images.saostar.vn/w800/pc/1634440766305/saostar-y937nvnpf0l6f2rl.jpg" class="card-img-top" alt="Customer Avatar">
+                <div class="card-body">
+                    <h5 class="card-title">V (BTS)</h5>
+                    <div class="d-flex">
+                        <span class="mr-2" style="color: rgb(255, 162, 0);">★★★★★</span>
+                        
+                    </div>
+                    <p class="card-text">Đèn rất đẹp và sang trọng, nhân viên vô cùng nhiệt tình. Tôi sẽ quay lại khi có nhu cầu.</p>
                 </div>
             </div>
-        </div>
-    </div>
 
-
-    <div class="product-container" onmouseover="showProductDetail()" onmouseout="hideProductDetail()">
-        <div class="product-img">
-            <img class="productImage" src="images/pr2.jpg" alt="Product"  >
-            <div class="product-detail">
-                <h3>Đèn chùm pha lê Louis ZFB001</h3>
-                <p class="product-price"> <span class="discounted-price">12,700,000đ</span></p>
-                <p class="original-price"> <span class="line-through">13,000,000đ</span></p>
-                <p class="purchase-count">17 lượt mua</p>
-                <div class="action-buttons">
-                    <img class="add-to-cart-icon" src="images/giohang.png" alt="Add to Cart">
-                    <button class="add-to-cart-btn" onclick="addToCart()">THÊM VÀO GIỎ HÀNG</button>
-                    <button class="buy-now-btn">MUA NGAY</button>
+            <div class="card mr-2 mt-4">
+                <img src="https://rollingstone.uol.com.br/media/_versions/emma_watson_no_tapete_vermelho_do_oscar__photo_by_jason_merrittgetty_image_widelg.jpg" class="card-img-top" alt="Customer Avatar">
+                <div class="card-body">
+                    <h5 class="card-title">Emma Watson</h5>
+                    <div class="d-flex">
+                        <span class="mr-2"style="color: rgb(255, 162, 0);">★★★★★</span>
+                        
+                    </div>
+                    <p class="card-text">Tôi đã mua đèn nhiều lần ở đây, thực sự rất ưng cả về giá cả lẫn chất lượng.</p>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <div class="product-container" onmouseover="showProductDetail()" onmouseout="hideProductDetail()">
-        <div class="product-img">
-            <img class="productImage" src="images/pr3.jpg" alt="Product"  >
-            <div class="product-detail">
-                <a href="Đèn chùm pha lê Hermes ZFB005.html" style="text-decoration: none;"><h3 style="color: black;" class="card-title">Đèn chùm pha lê Hermes ZFB005</h3></a>
-                
-                <p class="product-price"> <span class="discounted-price">22,500,000đ</span></p>
-                <p class="original-price"> <span class="line-through">26,300,000đ</span></p>
-                <p class="purchase-count">7 lượt mua</p>
-                <div class="action-buttons">
-                    <img class="add-to-cart-icon" src="images/giohang.png" alt="Add to Cart">
-                    <button class="add-to-cart-btn" onclick="addToCart()">THÊM VÀO GIỎ HÀNG</button>
-                    <button class="buy-now-btn">MUA NGAY</button>
+            <div class="card mr-2 mt-4">
+                <img src="https://mega.com.vn/media/news/0106_hinh-nen-Ronaldo121.jpg" class="card-img-top" alt="Customer Avatar">
+                <div class="card-body">
+                    <h5 class="card-title">Ronaldo</h5>
+                    <div class="d-flex">
+                        <span class="mr-2"style="color: rgb(255, 162, 0);">★★★★★</span>
+                        
+                    </div>
+                    <p class="card-text">Tốt</p>
                 </div>
             </div>
-        </div>
-    </div>
 
-
-
-    <div class="product-container" onmouseover="showProductDetail()" onmouseout="hideProductDetail()">
-        <div class="product-img">
-            <img class="productImage" src="images/pr4a.jpg" alt="Product"  >
-            <div class="product-detail">
-                <h3>Đèn chùm cổ điển Burberry ZFB002</h3>
-                <p class="product-price"> <span class="discounted-price">12,870,000đ</span></p>
-                <p class="original-price"> <span class="line-through">13,300,000đ</span></p>
-                <p class="purchase-count">27 lượt mua</p>
-                <div class="action-buttons">
-                    <img class="add-to-cart-icon" src="images/giohang.png" alt="Add to Cart">
-                    <button class="add-to-cart-btn" onclick="addToCart()">THÊM VÀO GIỎ HÀNG</button>
-                    <button class="buy-now-btn">MUA NGAY</button>
+            <div class="card mr-2 mt-4">
+                <img src="https://thuthuatnhanh.com/wp-content/uploads/2021/11/Hinh-anh-chan-dung-dep.jpg" class="card-img-top" alt="Customer Avatar">
+                <div class="card-body">
+                    <h5 class="card-title">Anna</h5>
+                    <div class="d-flex">
+                        <span class="mr-2"style="color: rgb(255, 162, 0);">★★★★★</span>
+                        
+                    </div>
+                    <p class="card-text">Thực sự rất ưng cả về giá cả lẫn chất lượng.</p>
                 </div>
             </div>
-        </div>
-    </div>
 
-
-    <div class="product-container" onmouseover="showProductDetail()" onmouseout="hideProductDetail()">
-        <div class="product-img">
-            <img class="productImage" src="images/pr5.png" alt="Product"  >
-            <div class="product-detail">
-                <h3>Đèn chùm pha lê Pháp ZFB004</h3>
-                <p class="product-price"> <span class="discounted-price">14,800,000đ</span></p>
-                <p class="original-price"> <span class="line-through">15,200,000đ</span></p>
-                <p class="purchase-count">19 lượt mua</p>
-                <div class="action-buttons">
-                    <img class="add-to-cart-icon" src="images/giohang.png" alt="Add to Cart">
-                    <button class="add-to-cart-btn" onclick="addToCart()">THÊM VÀO GIỎ HÀNG</button>
-                    <button class="buy-now-btn">MUA NGAY</button>
+            <div class="card mr-2 mt-4">
+                <img src="https://haycafe.vn/wp-content/uploads/2022/02/Anh-gai-xinh-chau-Au-My-600x600.jpg" class="card-img-top" alt="Customer Avatar">
+                <div class="card-body">
+                    <h5 class="card-title">Irene</h5>
+                    <div class="d-flex">
+                        <span class="mr-2"style="color: rgb(255, 162, 0);">★★★★★</span>
+                        
+                    </div>
+                    <p class="card-text">Đèn rất sang trọng, nhân viên tư vấn nhiệt tình.</p>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <div class="product-container" onmouseover="showProductDetail()" onmouseout="hideProductDetail()">
-        <div class="product-img">
-            <img class="productImage" src="images/pr21.jpg" alt="Product"  >
-            <div class="product-detail">
-                <h3>Đèn chùm pha lê Stellaer ZFB004</h3>
-                <p class="product-price"> <span class="discounted-price">14,800,000đ</span></p>
-                <p class="original-price"> <span class="line-through">15,200,000đ</span></p>
-                <p class="purchase-count">19 lượt mua</p>
-                <div class="action-buttons">
-                    <img class="add-to-cart-icon" src="images/giohang.png" alt="Add to Cart">
-                    <button class="add-to-cart-btn" onclick="addToCart()">THÊM VÀO GIỎ HÀNG</button>
-                    <button class="buy-now-btn">MUA NGAY</button>
+            <div class="card mr-2 mt-4">
+                <img src="https://static2.yan.vn/YanNews/2167221/202009/fan-ca-khia-binz-ve-chan-dung-bang-hang-nghin-chu-chau-dc265a17.jpg" class="card-img-top" alt="Customer Avatar">
+                <div class="card-body">
+                    <h5 class="card-title">BinZ</h5>
+                    <div class="d-flex">
+                        <span class="mr-2"style="color: rgb(255, 162, 0);">★★★★★</span>
+                        
+                    </div>
+                    <p class="card-text">Amazing!! Chưa bao giờ thấy đèn nào đẹp và rẻ như của shop, chúc shop làm ăn phát đạt.</p>
                 </div>
             </div>
-        </div>
-    </div>
 
-
-    </div>
-
-    <div class="product">
-    <div class="product-container" onmouseover="showProductDetail()" onmouseout="hideProductDetail()">
-        <div class="product-img">
-            <img class="productImage" src="images/pr6a.jpg" alt="Product" width="280" height="350" >
-            <div class="product-detail">
-                <a href="Đèn chùm pha lê Ấn ZFB003.html" style="text-decoration: none;"><h3 style="color: black;" class="card-title">Đèn chùm pha lê Ấn ZFB003</h3></a>
-               
-                <p class="product-price"> <span class="discounted-price">18,200,000đ</span></p>
-                <p class="original-price"> <span class="line-through">19,600,000đ</span></p>
-                <p class="purchase-count">25 lượt mua</p>
-                <div class="action-buttons">
-                    <img class="add-to-cart-icon" src="images/giohang.png" alt="Add to Cart">
-                    <button class="add-to-cart-btn" onclick="addToCart()">THÊM VÀO GIỎ HÀNG</button>
-                    <button class="buy-now-btn">MUA NGAY</button>
+            <div class="card mr-2 mt-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcPfq_uR5F7LktAhCwEiV4fgWcLriky9IKWw&usqp=CAU" class="card-img-top" alt="Customer Avatar">
+                <div class="card-body">
+                    <h5 class="card-title">Irene</h5>
+                    <div class="d-flex">
+                        <span class="mr-2"style="color: rgb(255, 162, 0);">★★★★★</span>
+                        
+                    </div>
+                    <p class="card-text">Đèn rất sang trọng, nhân viên tư vấn nhiệt tình.</p>
                 </div>
             </div>
-        </div>
-    </div>
 
-
-    <div class="product-container" onmouseover="showProductDetail()" onmouseout="hideProductDetail()">
-        <div class="product-img">
-            <img class="productImage" src="images/pr7.jpg" alt="Product"  >
-            <div class="product-detail">
-                <h3>Đèn chùm thủy tinh thiên nga ZFB005</h3>
-                <p class="product-price"> <span class="discounted-price">9,600,000đ</span></p>
-                <p class="original-price"> <span class="line-through">10,000,000đ</span></p>
-                <p class="purchase-count">39 lượt mua</p>
-                <div class="action-buttons">
-                    <img class="add-to-cart-icon" src="images/giohang.png" alt="Add to Cart">
-                    <button class="add-to-cart-btn" onclick="addToCart()">THÊM VÀO GIỎ HÀNG</button>
-                    <button class="buy-now-btn">MUA NGAY</button>
+            <div class="card mr-2 mt-4">
+                <img src="https://haycafe.vn/wp-content/uploads/2022/02/Anh-gai-xinh-chau-Au-My-600x600.jpg" class="card-img-top" alt="Customer Avatar">
+                <div class="card-body">
+                    <h5 class="card-title">Pretty girl</h5>
+                    <div class="d-flex">
+                        <span class="mr-2"style="color: rgb(255, 162, 0);">★★★★★</span>
+                        
+                    </div>
+                    <p class="card-text">Tôi đã mua đèn nhiều lần ở đây, thực sự rất ưng cả về giá cả lẫn chất lượng.</p>
                 </div>
             </div>
-        </div>
+        </aside>
     </div>
-
-
-    <div class="product-container" onmouseover="showProductDetail()" onmouseout="hideProductDetail()">
-        <div class="product-img">
-            <img class="productImage" src="images/pr8a.jpg" alt="Product"  >
-            <div class="product-detail">
-                <h3>Đèn chùm pha lê Versace ZFB007</h3>
-                <p class="product-price"> <span class="discounted-price">14,900,000đ</span></p>
-                <p class="original-price"> <span class="line-through">15,800,000đ</span></p>
-                <p class="purchase-count">8 lượt mua</p>
-                <div class="action-buttons">
-                    <img class="add-to-cart-icon" src="images/giohang.png" alt="Add to Cart">
-                    <button class="add-to-cart-btn" onclick="addToCart()">THÊM VÀO GIỎ HÀNG</button>
-                    <button class="buy-now-btn">MUA NGAY</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="product-container" onmouseover="showProductDetail()" onmouseout="hideProductDetail()">
-        <div class="product-img">
-            <img class="productImage" src="images/pr9a.jpg" alt="Product" >
-            <div class="product-detail">
-                <h3>Đèn chùm pha lê Prada ZFB008</h3>
-                <p class="product-price"> <span class="discounted-price">23,000,000đ</span></p>
-                <p class="original-price"> <span class="line-through">23,700,000đ</span></p>
-                <p class="purchase-count">17 lượt mua</p>
-                <div class="action-buttons">
-                    <img class="add-to-cart-icon" src="images/giohang.png" alt="Add to Cart">
-                    <button class="add-to-cart-btn" onclick="addToCart()">THÊM VÀO GIỎ HÀNG</button>
-                    <button class="buy-now-btn">MUA NGAY</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="product-container" onmouseover="showProductDetail()" onmouseout="hideProductDetail()">
-        <div class="product-img">
-            <img class="productImage" src="images/pr10a.jpg" alt="Product"  >
-            <div class="product-detail">
-                <h3>Đèn chùm pha lê Ai Cập ZFB005</h3>
-                <p class="product-price"> <span class="discounted-price">14,800,000đ</span></p>
-                <p class="original-price"> <span class="line-through">15,250,000đ</span></p>
-                <p class="purchase-count">62 lượt mua</p>
-                <div class="action-buttons">
-                    <img class="add-to-cart-icon" src="images/giohang.png" alt="Add to Cart">
-                    <button class="add-to-cart-btn" onclick="addToCart()">THÊM VÀO GIỎ HÀNG</button>
-                    <button class="buy-now-btn">MUA NGAY</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="product-container" onmouseover="showProductDetail()" onmouseout="hideProductDetail()">
-        <div class="product-img">
-            <img class="productImage" src="images/pr26.jpg" alt="Product"  >
-            <div class="product-detail">
-                <h3>Đèn chùm pha lê Miss ZFB005</h3>
-                <p class="product-price"> <span class="discounted-price">14,800,000đ</span></p>
-                <p class="original-price"> <span class="line-through">15,250,000đ</span></p>
-                <p class="purchase-count">62 lượt mua</p>
-                <div class="action-buttons">
-                    <img class="add-to-cart-icon" src="images/giohang.png" alt="Add to Cart">
-                    <button class="add-to-cart-btn" onclick="addToCart()">THÊM VÀO GIỎ HÀNG</button>
-                    <button class="buy-now-btn">MUA NGAY</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <div class="pagination-container">
     <ul class="pagination">
         <li><a href="den_chum_1.html" class="active">1</a></li>
         <li><a href="den_chum_2.html">2</a></li>
@@ -776,141 +862,22 @@
         <li><a href="#">5</a></li>
         <li><a href="#">6</a></li>
     </ul>
-
     </div>
-    <div class ="product">
-        <div class="product-container" onmouseover="showProductDetail()" onmouseout="hideProductDetail()" >
-        <div class="product-img">
-            <img class="productImage" src="images/pr11a.jpg" alt="Product" width="280" height="280" >
-            <div class="product-detail">
-                <h3>Đèn chùm pha lê Fendi ZFB005</h3>
-                <p class="product-price"> <span class="discounted-price">22,500,000đ</span></p>
-                <p class="original-price"> <span class="line-through">24,750,000đ</span></p>
-                <p class="purchase-count">34 lượt mua</p>
-                <div class="action-buttons">
-                    <img class="add-to-cart-icon" src="images/giohang.png" alt="Add to Cart">
-                    <button class="add-to-cart-btn" onclick="addToCart()">THÊM VÀO GIỎ HÀNG</button>
-                    <button class="buy-now-btn">MUA NGAY</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="product-container" onmouseover="showProductDetail()" onmouseout="hideProductDetail()" >
-        <div class="product-img">
-            <img class="productImage" src="images/pr12.jpg" alt="Product" >
-            <div class="product-detail">
-                <h3>Đèn chùm pha lê Conn ZFB002</h3>
-                <p class="product-price"> <span class="discounted-price">12,650,000đ</span></p>
-                <p class="original-price"> <span class="line-through">13,800,000đ</span></p>
-                <p class="purchase-count">55 lượt mua</p>
-                <div class="action-buttons">
-                    <img class="add-to-cart-icon" src="images/giohang.png" alt="Add to Cart">
-                    <button class="add-to-cart-btn" onclick="addToCart()">THÊM VÀO GIỎ HÀNG</button>
-                    <button class="buy-now-btn">MUA NGAY</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    
-        <div class="product-container" onmouseover="showProductDetail()" onmouseout="hideProductDetail()" >
-        <div class="product-img">
-            <img class="productImage" src="images/pr13.jpg" alt="Product" >
-            <div class="product-detail">
-                <h3>Đèn chùm pha lê Việt Nam ZFB002</h3>
-                <p class="product-price"> <span class="discounted-price">16,450,000đ</span></p>
-                <p class="original-price"> <span class="line-through">16,800,000đ</span></p>
-                <p class="purchase-count">82 lượt mua</p>
-                <div class="action-buttons">
-                    <img class="add-to-cart-icon" src="images/giohang.png" alt="Add to Cart">
-                    <button class="add-to-cart-btn" onclick="addToCart()">THÊM VÀO GIỎ HÀNG</button>
-                    <button class="buy-now-btn">MUA NGAY</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    
-        <div class="product-container" onmouseover="showProductDetail()" onmouseout="hideProductDetail()" >
-        <div class="product-img">
-            <img class="productImage" src="images/pr14.jpg" alt="Product" >
-            <div class="product-detail">
-                <h3>Đèn chùm pha lê Gucci ZFB008</h3>
-                <p class="product-price"> <span class="discounted-price">21,400,000đ</span></p>
-                <p class="original-price"> <span class="line-through">22,500,000đ</span></p>
-                <p class="purchase-count">29 lượt mua</p>
-                <div class="action-buttons">
-                    <img class="add-to-cart-icon" src="images/giohang.png" alt="Add to Cart">
-                    <button class="add-to-cart-btn" onclick="addToCart()">THÊM VÀO GIỎ HÀNG</button>
-                    <button class="buy-now-btn">MUA NGAY</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-        <div class="product-container" onmouseover="showProductDetail()" onmouseout="hideProductDetail()" >
-        <div class="product-img">
-            <img class="productImage" src="images/pr15a.jpg" alt="Product" >
-            <div class="product-detail">
-                <h3>Đèn chùm pha lê Dior ZFB008</h3>
-                <p class="product-price"> <span class="discounted-price">28,800,000đ</span></p>
-                <p class="original-price"> <span class="line-through">28,880,000đ</span></p>
-                <p class="purchase-count">15 lượt mua</p>
-                <div class="action-buttons">
-                    <img class="add-to-cart-icon" src="images/giohang.png" alt="Add to Cart">
-                    <button class="add-to-cart-btn" onclick="addToCart()">THÊM VÀO GIỎ HÀNG</button>
-                    <button class="buy-now-btn">MUA NGAY</button>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-
-
-    <div class="product-container" onmouseover="showProductDetail()" onmouseout="hideProductDetail()" >
-        <div class="product-img">
-            <img class="productImage" src="images/pr29.jpg" alt="Product" >
-            <div class="product-detail">
-                <h3>Đèn chùm pha lê Hanamis ZFB008</h3>
-                <p class="product-price"> <span class="discounted-price">28,800,000đ</span></p>
-                <p class="original-price"> <span class="line-through">28,880,000đ</span></p>
-                <p class="purchase-count">15 lượt mua</p>
-                <div class="action-buttons">
-                    <img class="add-to-cart-icon" src="images/giohang.png" alt="Add to Cart">
-                    <button class="add-to-cart-btn" onclick="addToCart()">THÊM VÀO GIỎ HÀNG</button>
-                    <button class="buy-now-btn">MUA NGAY</button>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-    
-</div>
-    </div>
-    </main>
-
 
     <footer id="footer" class="footer-1 mt-4">
         <div class="main-footer widgets-dark typo-light">
-            <div class="container" style="margin-left: 100px;">
+            <div class="container">
                 <div class="row">
-    
+
                     <div class="col-xs-12 col-sm-6 col-md-3">
                         <div class="widget subscribe no-box">
                             <h5 class="widget-title">LumièreLuxe-Luxury Light<span></span></h5>
-                            <p style="text-align:justify;"> Định nghĩa lại sự rực rỡ với sự sang trọng vô song. Chiếu sáng không
+                            <p>LumièreLuxe: Định nghĩa lại sự rực rỡ với sự sang trọng vô song. Chiếu sáng không
                                 gian của bạn bằng đèn chùm vượt thời gian của chúng tôi, nơi sự sang trọng gặp ánh sáng. Trải nghiệm nghệ
                                 thuật rạng rỡ..</p>
                         </div>
                     </div>
-    
+
                     <div class="col-xs-12 col-sm-6 col-md-3">
                         <div class="widget no-box">
                             <h5 class="widget-title">Dịch vụ<span></span></h5>
@@ -933,7 +900,7 @@
                             </ul>
                         </div>
                     </div>
-    
+
                     <div class="col-xs-12 col-sm-6 col-md-3">
                         <div class="widget no-box">
                             <h5 class="widget-title">Thông tin liên hệ<span></span></h5>
@@ -964,30 +931,34 @@
                     </div>
                     
                     
-    
+
                     <div class="col-xs-12 col-sm-6 col-md-3">
-    
-                        <div class="widget no-box" >
+
+                        <div class="widget no-box">
                             <h5 class="widget-title">Đường đến LumièreLuxe<span></span></h5>
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.601945519024!2d105.82584720928297!3d21.00858748839333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac8041a9648d%3A0xe487dd495fdfd676!2zMTIgUC4gQ2jDuWEgQuG7mWMsIFF1YW5nIFRydW5nLCDEkOG7kW5nIMSQYSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1701191037303!5m2!1svi!2s" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             
                         </div>
                     </div>
-    
+
                 </div>
             </div>
         </div>
-    
+
         <div class="footer-copyright">
-            <div class="container" style="padding: 0px;">
+            <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <p style="margin-left: 450px;">Copyright LumièreLuxe © 2023. All rights reserved.</p>
+                        <p>Copyright LumièreLuxe © 2023. All rights reserved.</p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 
 </html>
