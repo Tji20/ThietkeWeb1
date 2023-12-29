@@ -53,234 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 //Thêm sản phẩm vào giỏ hàng
-/*
-const product = {
-    name: "Đèn Ốp Quạt Trần Ø1000mm MC-KD1364",
-    price: 4950000,
-    image: "https://denchauau.vn/media/product/den-chum-quat-thien-ha-mc-kd1364.jpg",
-};
 
-const cart = [];
-
-function addToCart() {
-    cart.push(product);
-    updateCart();
-}
-
-function updateCart() {
-    const cartItemsContainer = document.getElementById("cart-items");
-    const cartTotalElement = document.getElementById("cart-total");
-
-    // Clear previous content
-    cartItemsContainer.innerHTML = "";
-
-    // Update cart items
-    let total = 0;
-    cart.forEach(item => {
-        const cartItem = document.createElement("div");
-        cartItem.classList.add("cart-item");
-
-        const image = document.createElement("img");
-        image.src = item.image;
-        image.alt = item.name;
-
-        const itemName = document.createElement("div");
-        itemName.textContent = item.name;
-
-        const itemPrice = document.createElement("div");
-        itemPrice.textContent = item.price.toLocaleString() + " VNĐ";
-
-        cartItem.appendChild(image);
-        cartItem.appendChild(itemName);
-        cartItem.appendChild(itemPrice);
-
-        cartItemsContainer.appendChild(cartItem);
-
-        // Calculate total price
-        total += item.price;
-    });
-
-    // Update total price
-    cartTotalElement.textContent = "Tổng tiền: " + total.toLocaleString() + " VNĐ";
-}
-*/
-/*
-const product = {
-    name: "Đèn Ốp Quạt Trần Ø1000mm MC-KD1364",
-    price: 4950000,
-    image: "https://denchauau.vn/media/product/den-chum-quat-thien-ha-mc-kd1364.jpg",
-};
-
-const cart = [];
-
-function addToCart() {
-    cart.push({ ...product, quantity: 1 });
-    updateCart();
-    alert("Sản phẩm đã được thêm vào giỏ hàng!");
-}
-
-function updateCart() {
-    const cartItemsContainer = document.getElementById("cart-items");
-    const cartTotalElement = document.getElementById("cart-total");
-
-    cartItemsContainer.innerHTML = "";
-
-    let total = 0;
-    cart.forEach(item => {
-        const cartItem = document.createElement("div");
-        cartItem.classList.add("cart-item");
-
-        const image = document.createElement("img");
-        image.src = item.image;
-        image.alt = item.name;
-
-        const itemName = document.createElement("div");
-        itemName.textContent = item.name;
-
-        const itemPrice = document.createElement("div");
-        itemPrice.textContent = item.price.toLocaleString() + " VNĐ";
-
-        const quantityInput = document.createElement("input");
-        quantityInput.type = "number";
-        quantityInput.value = item.quantity;
-        quantityInput.addEventListener("input", (e) => {
-            item.quantity = parseInt(e.target.value);
-            updateCart();
-        });
-
-        const removeButton = document.createElement("button");
-        removeButton.textContent = "Xóa";
-        removeButton.addEventListener("click", () => {
-            const index = cart.indexOf(item);
-            cart.splice(index, 1);
-            updateCart();
-        });
-
-        cartItem.appendChild(image);
-        cartItem.appendChild(itemName);
-        cartItem.appendChild(itemPrice);
-        cartItem.appendChild(quantityInput);
-        cartItem.appendChild(removeButton);
-
-        cartItemsContainer.appendChild(cartItem);
-
-        total += item.price * item.quantity;
-    });
-
-    cartTotalElement.textContent = "Tổng tiền: " + total.toLocaleString() + " VNĐ";
-}
-*/
-
-/*
-function updateCart() {
-    const cartItemsContainer = document.getElementById("cart-items");
-    const cartTotalElement = document.getElementById("cart-total");
-
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    cartItemsContainer.innerHTML = "";
-
-    let total = 0;
-    cart.forEach(item => {
-        const cartItem = document.createElement("div");
-        cartItem.classList.add("cart-item");
-
-        const image = document.createElement("img");
-        image.src = item.image;
-        image.alt = item.name;
-
-        const itemName = document.createElement("div");
-        itemName.textContent = item.name;
-
-        const itemPrice = document.createElement("div");
-        itemPrice.textContent = item.price.toLocaleString() + " VNĐ";
-
-        const quantityInput = document.createElement("input");
-        quantityInput.type = "number";
-        quantityInput.value = item.quantity;
-        quantityInput.addEventListener("input", (e) => {
-            item.quantity = parseInt(e.target.value);
-            updateCart();
-        });
-
-        const removeButton = document.createElement("button");
-        removeButton.textContent = "Xóa";
-        removeButton.addEventListener("click", () => {
-            const index = cart.indexOf(item);
-            cart.splice(index, 1);
-            updateCart();
-            localStorage.setItem("cart", JSON.stringify(cart));
-        });
-
-        cartItem.appendChild(image);
-        cartItem.appendChild(itemName);
-        cartItem.appendChild(itemPrice);
-        cartItem.appendChild(quantityInput);
-        cartItem.appendChild(removeButton);
-
-        cartItemsContainer.appendChild(cartItem);
-
-        total += item.price * item.quantity;
-    });
-
-    cartTotalElement.textContent = "Tổng tiền: " + total.toLocaleString() + " VNĐ";
-}
-
-updateCart();
-*/
-/*
-function updateCart() {
-    const cartItemsContainer = document.getElementById("cart-items");
-    const cartTotalElement = document.getElementById("cart-total");
-
-    cartItemsContainer.innerHTML = "";
-
-    let total = 0;
-    cart.forEach(item => {
-        const cartItem = document.createElement("div");
-        cartItem.classList.add("cart-item");
-
-        const image = document.createElement("img");
-        image.src = item.image;
-        image.alt = item.name;
-
-        const itemName = document.createElement("div");
-        itemName.textContent = item.name;
-
-        const itemPrice = document.createElement("div");
-        itemPrice.textContent = item.price.toLocaleString() + " VNĐ";
-
-        const quantityInput = document.createElement("input");
-        quantityInput.type = "number";
-        quantityInput.value = item.quantity;
-        quantityInput.addEventListener("input", (e) => {
-            item.quantity = parseInt(e.target.value);
-            updateCart();
-        });
-
-        const removeButton = document.createElement("button");
-        removeButton.textContent = "Xóa";
-        removeButton.addEventListener("click", () => {
-            const index = cart.indexOf(item);
-            cart.splice(index, 1);
-            updateCart();
-        });
-
-        cartItem.appendChild(image);
-        cartItem.appendChild(itemName);
-        cartItem.appendChild(itemPrice);
-        cartItem.appendChild(quantityInput);
-        cartItem.appendChild(removeButton);
-
-        cartItemsContainer.appendChild(cartItem);
-
-        total += item.price * item.quantity;
-    });
-
-    cartTotalElement.textContent = "Tổng tiền: " + total.toLocaleString() + " VNĐ";
-    updateCart();
-}
-*/
 function updateCart() {
     const cartItemsContainer = document.getElementById("cart-items");
     const cartTotalElement = document.getElementById("cart-total");
@@ -312,18 +85,18 @@ function updateCart() {
         quantityInput.value = item.quantity;
         quantityInput.min = 1;
         quantityInput.addEventListener("change", (event) => updateQuantity(index, event.target.value));
-        quantityInput.style.width = "50px"; // Đặt chiều rộng của input
+        quantityInput.style.width = "50px"; 
 
         const removeButton = document.createElement("button");
         removeButton.textContent = "Xóa";
         removeButton.addEventListener("click", () => removeItem(index));
-        removeButton.style.color = "white"; // Đặt màu chữ là trắng
-        removeButton.style.backgroundColor = "red"; // Đặt màu nền là đỏ
-        removeButton.style.border = "none"; // Loại bỏ viền
-        removeButton.style.padding = "5px 10px"; // Thêm padding
-        removeButton.style.transition = "transform 0.3s"; // Hiệu ứng transition
+        removeButton.style.color = "white"; 
+        removeButton.style.backgroundColor = "red"; 
+        removeButton.style.border = "none"; 
+        removeButton.style.padding = "5px 10px"; 
+        removeButton.style.transition = "transform 0.3s"; 
 
-// Hover effect
+// Hover 
 removeButton.addEventListener("mouseover", () => {
     removeButton.style.transform = "scale(1.02)";
 });
@@ -368,6 +141,5 @@ function clearCart() {
 updateCart();
 
 function gotoCheckout() {
-    // Redirect to the checkout page
     window.location.href = "checkout.html";
 }
