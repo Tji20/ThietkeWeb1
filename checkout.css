@@ -67,3 +67,17 @@
     align-self: flex-end; 
     margin-right: 20px;
 }
+@media only screen and (max-width: 768px) {
+    .checkout-container {
+        width: 100%; 
+    }
+
+    .product-info,
+    .customer-info {
+        flex: 1 100%; 
+    }
+
+    .product-info-item {
+        flex: 0 0 100%; 
+    }
+}
