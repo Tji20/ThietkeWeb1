@@ -546,7 +546,7 @@ header {
   }
 
   .color-box.selected::before {
-    content: '\2022'; /* Dấu chấm */
+    content: '\2022'; 
     position: absolute;
     top: 5px;
     left: 5px;
