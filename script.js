@@ -1,7 +1,5 @@
 const products = [
-    { 
-        name: 'Đèn Ốp Quạt Trần Ø1000mm MC-KD1364'
-    },
+    { name: 'Đèn Ốp Quạt Trần Ø1000mm MC-KD1364'},
     { name: 'Đèn Ốp Trần LED Hiện Đại L1090mm YN-1601-5' },
     { name: 'Đèn Thả Ngoài Trời Chống Thấm AL-T5026A-18' },
     { name: 'Đèn Thả Ngoài Trời Nhôm Đúc W290mm AL-X1103-29' },
@@ -75,14 +73,4 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// document.getElementById('searchForm').addEventListener('submit', function (event) {
-//     event.preventDefault();
-//     // You can add additional handling here, such as navigating to a search results page
-// });
-
-// // Handle selection from the dropdown
-// productDropdown.addEventListener('change', function () {
-//     searchInput.value = productDropdown.value;
-//     productDropdown.style.display = 'none';
-// });
 
