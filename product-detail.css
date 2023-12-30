@@ -27,7 +27,20 @@ header {
   height: 300px; 
   display: block; /* Chuyển đổi hình ảnh thành phần tử block */
 }
+@media screen and (max-width: 768px) {
+  header {
+    height: auto; /* Tùy chỉnh chiều cao của header cho các thiết bị có độ rộng màn hình nhỏ hơn 768px */
+  }
 
+  .logo-img {
+    height: 40px; /* Đặt chiều cao nhỏ hơn cho màn hình nhỏ hơn 768px */
+    width: 40px; /* Đặt chiều rộng nhỏ hơn cho màn hình nhỏ hơn 768px */
+  }
+
+  .banner img {
+    height: auto; /* Giữ nguyên chiều cao tự động để hình ảnh không bị méo */
+  }
+}
 
 .container{
     max-width: 1200px; /*Giới hạn chiều rộng tối đa của container*/
@@ -146,32 +159,37 @@ header {
     color: #000;
 }
 
-@media screen and (max-width: 992px){
-    .product-div{
-        grid-template-columns: 100%; /* Chuyển sang một cột khi độ rộng màn hình nhỏ hơn hoặc bằng 992px */
-    }
-    .product-div-right{
-        text-align: center; /* Căn giữa nội dung bên phải khi độ rộng màn hình nhỏ hơn hoặc bằng 992px */
-      }
-    }
-    .product-rating{
-        justify-content: center; /* Căn giữa phần đánh giá sản phẩm khi độ rộng màn hình nhỏ hơn hoặc bằng 992px */
-    }
-    }
-    .product-description{
-        max-width: 400px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-}
 
-@media screen and (max-width: 400px){
-    .btn-groups button{
-        width: 100%;
-        margin-bottom: 10px;
-    }
-}
+@media screen and (max-width: 768px) {
+  .product-div {
+    grid-template-columns: 1fr; /* Chuyển sang một cột */
+  }
 
+  .product-div-left, .product-div-right {
+    padding: 20px; /* Giảm khoảng cách giữa phần left và right */
+  }
+
+  .img-container img {
+    width: 100%; /* Ảnh chiếm toàn bộ chiều rộng của phần container */
+    margin: 0; /* Loại bỏ margin để ảnh không bị lệch */
+  }
+
+  .hover-container {
+    margin-top: 16px; /* Giảm khoảng cách giữa hover-container và product-div */
+    display: flex;
+    flex-direction: row; /* Đưa tất cả các ảnh về một hàng */
+    overflow-x: auto; /* Cho phép cuộn nếu nội dung vượt khỏi chiều rộng */
+  }
+
+  .hover-container div {
+    margin: 0 4px 8px 0; /* Điều chỉnh khoảng cách giữa các hộp chứa ảnh */
+  }
+
+  .product-rating {
+    margin-top: 12px;
+    margin-right: 0; /* Đưa về giữa */
+  }
+}
 
 /*mô tả sản phẩm*/
   .tabs {
@@ -398,9 +416,9 @@ header {
   .card {
       width: 100%;
       height: 300px;
-      transform-style: preserve-3d;
+      transform-style: preserve-3d; /* Bảo toàn chất lượng 3D của các phần tử con */
       perspective: 500px;
-      border: none;
+      border: none; /* Không có đường viền */
       background-color: inherit;
   }
   
@@ -414,15 +432,16 @@ header {
       background: #fff;
       transform-style: preserve-3d;
       transition: 0.5s;
-      backface-visibility: hidden;
-  }
+      backface-visibility: hidden; /* Ẩn phần sau của các phần tử 3D khi đang xoay */
+    }
+
   .card .box.front{
       background-image: url(img/pattern.png);
       background-repeat: repeat;
   }
   .card .box.front,
   .card .box.back {
-      position: absolute;
+      position: absolute; /* Đặt vị trí tuyệt đối để kiểm soát vị trí */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -433,13 +452,13 @@ header {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
     border: 5px solid #262626;
     margin-bottom: 25px;
   }
   
   .card:hover .box.front {
-      transform: rotateY(180deg);
+      transform: rotateY(180deg); /* Xoay theo trục Y 180 độ */
   }
   .box.front h2 {
     font-family: 'Bebas Neue', cursive;
@@ -457,7 +476,7 @@ header {
       transform: rotateY(180deg);
       padding: 20px 30px;
       text-align: center;
-      user-select: none;
+      user-select: none; 
   }
   
   .card .box.back .fa-quote-left {
@@ -470,7 +489,8 @@ header {
   .card:hover .box.back {
       transform: rotateY(360deg);
   }
-  
+
+  /* Kiểm soát kiểu dáng tại các kích thước màn hình nhỏ hơn hoặc bằng 991.5px */
   @media(max-width: 991.5px) {
       .col-lg-4 {
           margin-top: 40px;
@@ -526,7 +546,7 @@ header {
   }
 
   .color-box.selected::before {
-    content: '\2022'; /* Dấu chấm */
+    content: '\2022'; 
     position: absolute;
     top: 5px;
     left: 5px;
@@ -566,21 +586,4 @@ header {
 
 
 
-/* Style for the messenger and insta icons */
-.messenger-insta-icons {
-  position: fixed;
-  bottom: 20px;
-    right: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-      }
-  .messenger-insta-icons img { 
-  width: 50px;  
-  margin-bottom: 10px;  
-  cursor: pointer;
-  border-radius: 50%;
-  transition: transform 0.2s ease-in-out; /* Thêm hiệu ứng chuyển động */ }
-  .messenger-insta-icons img:hover {
-  transform: scale(1.2); /* Khi di chuột vào, ảnh sẽ phóng to */
-      }
+  
