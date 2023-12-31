@@ -15,7 +15,6 @@ const products = [
     { name: 'Đèn Thả LED Văn Phòng Ø3000mm BA-MC8300B' },
     { name: 'Đèn Cây Trang Trí H1600mm AL-MD7870S' },
     { name: 'Đèn Thả Trang Trí Kiểu Bắc Âu Ø900mm AL-DT5021A-90' },
-    // Add more product data as needed
 ];
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -29,8 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
         searchInput.addEventListener('input', function () {
             const inputValue = searchInput.value.toLowerCase();
             const filteredProducts = products.filter(product => product.name.toLowerCase().includes(inputValue));
-
-            // Xóa tất cả các options hiện có trong datalist
             productSuggestions.innerHTML = '';
 
             if (filteredProducts.length > 0) {
@@ -42,9 +39,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
 
                 // Hiển thị danh sách gợi ý
-                productList.innerHTML = ''; // Xóa nội dung hiện tại trong productList
+                productList.innerHTML = ''; 
 
-                // Hiển thị ảnh của sản phẩm tìm kiếm
+              
                 productImagesContainer.innerHTML = '';
                 filteredProducts.forEach(product => {
                     const productDiv = document.createElement('div');
@@ -64,9 +61,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 productList.style.display = 'block';
             } else {
-                // Ẩn danh sách gợi ý nếu không có sản phẩm nào phù hợp
+                
                 productList.style.display = 'none';
-                productImagesContainer.innerHTML = ''; // Xóa nội dung hiện tại trong productImagesContainer
+                productImagesContainer.innerHTML = ''; 
             }
         });
     }

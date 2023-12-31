@@ -21,7 +21,7 @@ function resetActiveImg(){
 }
 
 
-//tap items
+
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
@@ -31,7 +31,7 @@ const panes = $$(".tab-pane");
 const tabActive = $(".tab-item.active");
 const line = $(".tabs .line");
 
-// SonDN fixed - Active size wrong size on first load.
+
 
 requestIdleCallback(function () {
   line.style.left = tabActive.offsetLeft + "px";
@@ -54,7 +54,7 @@ tabs.forEach((tab, index) => {
 });
 
 
-//đánh giá sản phẩm
+
 const allStar = document.querySelectorAll('.rating .star')
 const ratingValue = document.querySelector('.rating input')
 

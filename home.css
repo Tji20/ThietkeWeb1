@@ -1,8 +1,4 @@
 
-
-
-
-
 .card-img-top {
   transition: transform 0.3s ease-in-out;
 }
@@ -28,9 +24,6 @@
   margin: 0;
   padding: 0;
 }
-
-
-
 h2 {
   background-color: whitesmoke;
 }
@@ -42,8 +35,8 @@ h3 {
   overflow-y: auto; /* Cho phép thanh cuộn theo chiều dọc khi nội dung vượt quá chiều cao tối đa */
 }
 #news {
-  max-height: 1900px; /* Thiết lập chiều cao tối đa cho thanh cuộn */
-  overflow-y: auto; /* Cho phép thanh cuộn theo chiều dọc khi nội dung vượt quá chiều cao tối đa */
+  max-height: 1900px; 
+  overflow-y: auto; 
 }
 
 header.bg-dark {
@@ -55,7 +48,6 @@ header h1,
   color: rgb(191, 152, 80)!important;
 }
 
-
 /* CSS cho mega menu */
 .mega-menu {
   position: static; /* Đảm bảo menu không bị ẩn khi mở */
@@ -66,8 +58,8 @@ header h1,
   width: 100%;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: absolute; /* Thay đổi thành absolute */
-  z-index: 1000; /* Đảm bảo nó ở trên cùng */
+  position: absolute; 
+  z-index: 1000;
 }
 
 .mega-menu-content ul {
@@ -104,7 +96,6 @@ header h1,
   display: block;
 }
 
-
 /* CSS cho dropdown menu */
 .navbar-nav .dropdown .dropdown-menu {
   background-color: #fff;
@@ -129,52 +120,43 @@ header h1,
   display: block;
 }
 
-/* CSS for the col-md-6 text-md-right */
+
 .col-md-6.text-md-right {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 
-/* CSS for the wrapper-account and additional-actions */
 .wrapper-account,
 .additional-actions {
-  margin-left: 20px; /* Adjust the margin as needed */
+  margin-left: 20px;
 }
 
-/* CSS for the header-action-toggle */
 .header-action-toggle {
   text-decoration: none;
-  color: #fff; /* Change the color as needed */
+  color: #fff; 
   display: flex;
   align-items: center;
 }
 
-/* CSS for the box-icon */
-
-
-/* CSS for the icon-box-text */
 .icon-box-text {
-  margin-left: 10px; /* Adjust the margin as needed */
+  margin-left: 10px;
 }
 
-/* CSS for the additional actions links */
 .header-action {
   text-decoration: none;
-  color: #fff; /* Change the color as needed */
-  margin-left: 20px; /* Adjust the margin as needed */
+  color: #fff; 
+  margin-left: 20px; 
 }
 
 
-/* Main Footer */
+/* Footer */
 footer .main-footer{  
   padding: 20px 0; 
   opacity: 1.0; 
   background-image: url('https://i.pinimg.com/564x/6c/01/0e/6c010eb9d8781cd9422c4c5f34cfd989.jpg') !important ;
 };
-
 footer ul{  padding-left: 0;  list-style: none;}
-
 /* Copy Right Footer */
 .footer-copyright { background: #222; padding: 5px 0;}
 .footer-copyright .logo {    display: inherit;}
@@ -184,7 +166,6 @@ footer ul{  padding-left: 0;  list-style: none;}
 .footer-copyright nav ul li a{  color: #969696;}
 .footer-copyright nav ul li:first-child { border: medium none;  padding-left: 0;}
 .footer-copyright p { color: #969696; margin: 2px 0 0;}
-
 /* Footer Top */
 .footer-top{  background: #252525;  padding-bottom: 30px; margin-bottom: 30px;  border-bottom: 3px solid #222;}
 
